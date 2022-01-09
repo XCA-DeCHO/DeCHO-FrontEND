@@ -62,7 +62,7 @@ function NewWalletSuccess ({ navigation }) {
             <TextArea mb={5}></TextArea>
         </VStack>
         </ScrollView>
-        <Button isLoading={showModal} mx={5} mb={5} colorScheme='teal' onPress={() => setShowModal(true)}>Proceed</Button>
+        <Button /*isLoading = { showModal }*/ isLoading={true} mx={5} mb={5} colorScheme='teal' onPress={() => setShowModal(true)}>Coming Soon</Button>
         </KeyboardAvoidingView>
     )}
 }

@@ -9,6 +9,7 @@ import {
 import colors from "../utils/colors";
 import AppLoading from 'expo-app-loading';
 import NameBox from "../globalComponents/infoBox/NameBox";
+import ProgressBox from "../globalComponents/ProgressBox/ProgressBox";
 
 
 function ViewInfo({ navigation }) {
@@ -18,6 +19,7 @@ function ViewInfo({ navigation }) {
 
   let [fontsLoaded] = useFonts({ JosefinSans_700Bold, JosefinSans_400Regular });
   const [showModal, setShowModal] = React.useState(false);
+  let pFix = ''
 
   if (!fontsLoaded && Platform.OS == 'ios') {
     return <AppLoading />;
@@ -39,25 +41,7 @@ function ViewInfo({ navigation }) {
           </Text>
           <NameBox name={'XCA DeCHO'} slogan={'A great DeCHO'}/>
 
-          <VStack bg={colors.lightBlue} px={5} borderRadius={'md'} mt={5} py={2}>
-            <Text
-              m={1}
-              color={colors.black}
-              fontSize={'18'}
-              fontFamily={'JosefinSans_400Regular'}>
-              13,056
-            </Text>
-            <Progress mb={1} value={'55'} colorScheme={'emerald'}/>
-            <Text
-              mb={1}
-              color={colors.black}
-              fontSize={'18'}
-              fontFamily={'JosefinSans_400Regular'}
-              alignSelf={'flex-end'}
-            >
-              20,000
-            </Text>
-          </VStack>
+          <ProgressBox goal={3125000} progress={150000} prefix={''}/>
           <Text fontSize={12} pb={10} pt={10}>
             Mauris in molestie erat, nec pellentesque ipsum. Nam varius, enim non ultrices fringilla, ipsum est luctus erat, et vulputate ante nisi ac augue. Pellentesque odio ante, congue at arcu in, fringilla aliquet lectus. Vivamus tempus sapien quis metus semper, a pulvinar diam cursus. Suspendisse eu tristique enim. Pellentesque nec nunc quam. Morbi bibendum, lacus id consectetur viverra, magna nisi vehicula sem, nec pretium nibh dolor vitae quam. Fusce eget ultrices magna. Aliquam metus felis, dignissim eu felis eu, suscipit sollicitudin libero. Maecenas dapibus magna nec nunc finibus vestibulum. Sed magna mi, sodales in tellus sit amet, placerat porta justo. Vestibulum mollis ac purus vitae mattis.
             {'\n'}

@@ -12,7 +12,7 @@ import AnonymousApproval from "./src/modes/anonymous/Approval";
 import WalletApproval from "./src/modes/wallet/Approval";
 import ViewInfo from "./src/Info/ViewInfo";
 import Options from './src/globalComponents/Options'
-
+import AnonymousDonate from "./src/modes/anonymous/Donate";
 
 import { NativeBaseProvider } from 'native-base/src/core/NativeBaseProvider';
 
@@ -31,6 +31,7 @@ function App() {
           <Stack.Screen name="NewWalletSuccess" component={NewWalletSuccess} />
           <Stack.Screen name="Onboarding" component={Onboarding} />
           <Stack.Screen name="AnonymousApproval" component={AnonymousApproval} />
+          <Stack.Screen name="AnonymousDonate" component={AnonymousDonate} />
           <Stack.Screen name="WalletApproval" component={WalletApproval} />
           <Stack.Screen name="ViewInfo" component={ViewInfo} />
           <Stack.Screen name="Options" component={Options} />

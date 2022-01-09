@@ -21,7 +21,7 @@ function NameBox(props) {
     return <AppLoading />;
   } else {
     return(
-      <ImageBackground source={xki} style={{height:350}} imageStyle={{ borderRadius: 10}}>
+      <ImageBackground source={props.img} style={{height:350}} imageStyle={{ borderRadius: 10}}>
         <LinearGradient colors={['transparent', colors.white]} style={{flex:1,
           justifyContent:'flex-end',
           alignItems:'flex-end',
@@ -30,6 +30,7 @@ function NameBox(props) {
           <Text
             color={colors.black}
             fontSize={'24'}
+            fontWeight={'bold'}
             fontFamily={'JosefinSans_700Bold'}>
             {props.name}
           </Text>

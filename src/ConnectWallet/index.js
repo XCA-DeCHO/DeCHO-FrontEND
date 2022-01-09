@@ -117,7 +117,7 @@ function ConnectWallet({ navigation }) {
                             fontSize={'16'}
                             alignSelf={'center'}
                             fontFamily={'JosefinSans_400Regular'}>
-                              Error message
+                              Coming SOON!
                           </Text>
                       </Modal.Body>
                       <Modal.Footer>
