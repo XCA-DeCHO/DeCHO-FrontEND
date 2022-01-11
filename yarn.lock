@@ -7628,6 +7628,11 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
 
+"react-native-algo@^0.1.7":
+  "integrity" "sha512-Xi6R8j7hI4ueQF42i1dn/fZu0hb6nxQcAVep3LkaFbo9n6X3sQZg3WLEbqNSbre7yaf7c6QL16GXkf93MSxHbQ=="
+  "resolved" "https://registry.npmjs.org/react-native-algo/-/react-native-algo-0.1.7.tgz"
+  "version" "0.1.7"
+
 "react-native-codegen@^0.0.7":
   "integrity" "sha512-dwNgR8zJ3ALr480QnAmpTiqvFo+rDtq6V5oCggKhYFlRjzOmVSFn3YD41u8ltvKS5G2nQ8gCs2vReFFnRGLYng=="
   "resolved" "https://registry.npmjs.org/react-native-codegen/-/react-native-codegen-0.0.7.tgz"
