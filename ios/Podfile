@@ -8,7 +8,6 @@ target 'reDeCHO' do
   use_expo_modules!
   post_integrate do |installer|
     expo_patch_react_imports!(installer)
-    expo_patch_react_imports!(installer)
   end
   config = use_native_modules!
 
