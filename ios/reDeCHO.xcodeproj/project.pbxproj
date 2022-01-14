@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* reDeCHOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* reDeCHOTests.m */; };
-		0ABCC9FBCCB4A9603C179B59 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31645BBB9457A02D5663D3CE /* ExpoModulesProvider.swift */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2C4E9B6C2790B34100D25D2F /* swift-algorand-sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 2C4E9B6B2790B34100D25D2F /* swift-algorand-sdk */; };
+		2C4E9B6E2790B37300D25D2F /* RCTAlgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E9B6D2790B37300D25D2F /* RCTAlgo.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8375202F152788FFFD651BB6 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED064534F46685C7D72483 /* ExpoModulesProvider.swift */; };
-		84A1EFD14BD4DDF0BD697ED7 /* libPods-reDeCHO-reDeCHOTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DE53855D81D58EFF322634 /* libPods-reDeCHO-reDeCHOTests.a */; };
-		95FFC3948A3821DC4A18489C /* libPods-reDeCHO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E559CAB148133D0C23D39977 /* libPods-reDeCHO.a */; };
+		946114A3BDB60862DF405472 /* libPods-reDeCHO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77970473A6E03E34ED7BCC9F /* libPods-reDeCHO.a */; };
+		AF161A9E2452AC803C90D33C /* libPods-reDeCHO-reDeCHOTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E93983AF4E2F54B39C29F5C2 /* libPods-reDeCHO-reDeCHOTests.a */; };
+		D3BB6341E16573EAEBDF14A4 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72B8ED3F3D8217CDA85E9EF /* ExpoModulesProvider.swift */; };
+		FCE91192EADB056C597ABC52 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C478E22894C904867865DF /* ExpoModulesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,22 +34,23 @@
 		00E356EE1AD99517003FC87E /* reDeCHOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reDeCHOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* reDeCHOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = reDeCHOTests.m; sourceTree = "<group>"; };
+		104BF0E8002E4DE924D7DE62 /* Pods-reDeCHO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO.debug.xcconfig"; path = "Target Support Files/Pods-reDeCHO/Pods-reDeCHO.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* reDeCHO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reDeCHO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = reDeCHO/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = reDeCHO/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = reDeCHO/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = reDeCHO/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = reDeCHO/main.m; sourceTree = "<group>"; };
-		162AA11F15EB540A38AFF485 /* Pods-reDeCHO-reDeCHOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO-reDeCHOTests.debug.xcconfig"; path = "Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests.debug.xcconfig"; sourceTree = "<group>"; };
-		16DE53855D81D58EFF322634 /* libPods-reDeCHO-reDeCHOTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reDeCHO-reDeCHOTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		31645BBB9457A02D5663D3CE /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-reDeCHO-reDeCHOTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		2C4E9B6D2790B37300D25D2F /* RCTAlgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCTAlgo.swift; sourceTree = "<group>"; };
+		58C478E22894C904867865DF /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-reDeCHO-reDeCHOTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		63306FA49A0F7CBAC618BB12 /* Pods-reDeCHO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO.release.xcconfig"; path = "Target Support Files/Pods-reDeCHO/Pods-reDeCHO.release.xcconfig"; sourceTree = "<group>"; };
+		77970473A6E03E34ED7BCC9F /* libPods-reDeCHO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reDeCHO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = reDeCHO/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CEFC295EDD8584847C027247 /* Pods-reDeCHO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO.debug.xcconfig"; path = "Target Support Files/Pods-reDeCHO/Pods-reDeCHO.debug.xcconfig"; sourceTree = "<group>"; };
-		D172E6E5AB86F60BF19F4101 /* Pods-reDeCHO-reDeCHOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO-reDeCHOTests.release.xcconfig"; path = "Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests.release.xcconfig"; sourceTree = "<group>"; };
-		E559CAB148133D0C23D39977 /* libPods-reDeCHO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reDeCHO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECED064534F46685C7D72483 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-reDeCHO/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		8661C7732E0C5CC819530ACF /* Pods-reDeCHO-reDeCHOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO-reDeCHOTests.debug.xcconfig"; path = "Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3D7813CA60D02EF79C41517 /* Pods-reDeCHO-reDeCHOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO-reDeCHOTests.release.xcconfig"; path = "Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests.release.xcconfig"; sourceTree = "<group>"; };
+		E72B8ED3F3D8217CDA85E9EF /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-reDeCHO/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		E93983AF4E2F54B39C29F5C2 /* libPods-reDeCHO-reDeCHOTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reDeCHO-reDeCHOTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F74E3820E2BAF616C0B0D7EC /* Pods-reDeCHO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO.release.xcconfig"; path = "Target Support Files/Pods-reDeCHO/Pods-reDeCHO.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84A1EFD14BD4DDF0BD697ED7 /* libPods-reDeCHO-reDeCHOTests.a in Frameworks */,
+				AF161A9E2452AC803C90D33C /* libPods-reDeCHO-reDeCHOTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95FFC3948A3821DC4A18489C /* libPods-reDeCHO.a in Frameworks */,
+				946114A3BDB60862DF405472 /* libPods-reDeCHO.a in Frameworks */,
+				2C4E9B6C2790B34100D25D2F /* swift-algorand-sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,13 +91,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		024062B9147AFA4CC36455DF /* ExpoModulesProviders */ = {
+		0D777FA7766381986F703599 /* reDeCHOTests */ = {
 			isa = PBXGroup;
 			children = (
-				7C757186A8BED829AA43AC39 /* reDeCHO */,
-				74720F82AFCF1ADF6F7B4893 /* reDeCHOTests */,
+				58C478E22894C904867865DF /* ExpoModulesProvider.swift */,
 			);
-			name = ExpoModulesProviders;
+			name = reDeCHOTests;
 			sourceTree = "<group>";
 		};
 		13B07FAE1A68108700A75B9A /* reDeCHO */ = {
@@ -113,26 +116,21 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				E559CAB148133D0C23D39977 /* libPods-reDeCHO.a */,
-				16DE53855D81D58EFF322634 /* libPods-reDeCHO-reDeCHOTests.a */,
+				77970473A6E03E34ED7BCC9F /* libPods-reDeCHO.a */,
+				E93983AF4E2F54B39C29F5C2 /* libPods-reDeCHO-reDeCHOTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		74720F82AFCF1ADF6F7B4893 /* reDeCHOTests */ = {
+		61B4729DA83816062B75A643 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				31645BBB9457A02D5663D3CE /* ExpoModulesProvider.swift */,
+				104BF0E8002E4DE924D7DE62 /* Pods-reDeCHO.debug.xcconfig */,
+				63306FA49A0F7CBAC618BB12 /* Pods-reDeCHO.release.xcconfig */,
+				8661C7732E0C5CC819530ACF /* Pods-reDeCHO-reDeCHOTests.debug.xcconfig */,
+				B3D7813CA60D02EF79C41517 /* Pods-reDeCHO-reDeCHOTests.release.xcconfig */,
 			);
-			name = reDeCHOTests;
-			sourceTree = "<group>";
-		};
-		7C757186A8BED829AA43AC39 /* reDeCHO */ = {
-			isa = PBXGroup;
-			children = (
-				ECED064534F46685C7D72483 /* ExpoModulesProvider.swift */,
-			);
-			name = reDeCHO;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -145,13 +143,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				2C4E9B6D2790B37300D25D2F /* RCTAlgo.swift */,
 				13B07FAE1A68108700A75B9A /* reDeCHO */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* reDeCHOTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				9BC7CDAE0ABA1B89CF85C060 /* Pods */,
-				024062B9147AFA4CC36455DF /* ExpoModulesProviders */,
+				61B4729DA83816062B75A643 /* Pods */,
+				CF8E298367FF99C9B9A4CB66 /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -167,16 +166,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9BC7CDAE0ABA1B89CF85C060 /* Pods */ = {
+		903BD1B917A2CA5406772693 /* reDeCHO */ = {
 			isa = PBXGroup;
 			children = (
-				CEFC295EDD8584847C027247 /* Pods-reDeCHO.debug.xcconfig */,
-				F74E3820E2BAF616C0B0D7EC /* Pods-reDeCHO.release.xcconfig */,
-				162AA11F15EB540A38AFF485 /* Pods-reDeCHO-reDeCHOTests.debug.xcconfig */,
-				D172E6E5AB86F60BF19F4101 /* Pods-reDeCHO-reDeCHOTests.release.xcconfig */,
+				E72B8ED3F3D8217CDA85E9EF /* ExpoModulesProvider.swift */,
 			);
-			name = Pods;
-			path = Pods;
+			name = reDeCHO;
+			sourceTree = "<group>";
+		};
+		CF8E298367FF99C9B9A4CB66 /* ExpoModulesProviders */ = {
+			isa = PBXGroup;
+			children = (
+				903BD1B917A2CA5406772693 /* reDeCHO */,
+				0D777FA7766381986F703599 /* reDeCHOTests */,
+			);
+			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,12 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "reDeCHOTests" */;
 			buildPhases = (
-				CC8D9E6A3C1BB5C3F39263D3 /* [CP] Check Pods Manifest.lock */,
+				E03FF9ABBCB046500EFCF58E /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				4176C57CCAA03DD7A850BD3A /* [CP] Embed Pods Frameworks */,
-				9A4DFF3BD043A37A2A166310 /* [CP] Copy Pods Resources */,
+				C548D62F27084787A9054886 /* [CP] Embed Pods Frameworks */,
+				5D3C687A68CBEB3A88E4708B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,20 +211,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "reDeCHO" */;
 			buildPhases = (
-				F85B1F0FF48C7399FE3AAF38 /* [CP] Check Pods Manifest.lock */,
+				A78E761713D922CEE19F565D /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				2BABFF97E80B9E2B3273F3AC /* [CP] Embed Pods Frameworks */,
-				C2928ED6AE35B629CF951675 /* [CP] Copy Pods Resources */,
+				1A7BC5181D210300FC4F57C2 /* [CP] Embed Pods Frameworks */,
+				D3A4EE3EA4F079EE1BF728A9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = reDeCHO;
+			packageProductDependencies = (
+				2C4E9B6B2790B34100D25D2F /* swift-algorand-sdk */,
+			);
 			productName = reDeCHO;
 			productReference = 13B07F961A680F5B00A75B9A /* reDeCHO.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +258,9 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
+			packageReferences = (
+				2C4E9B6A2790B34000D25D2F /* XCRemoteSwiftPackageReference "Swift-Algorand-Sdk" */,
+			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -295,7 +305,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		2BABFF97E80B9E2B3273F3AC /* [CP] Embed Pods Frameworks */ = {
+		1A7BC5181D210300FC4F57C2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -312,24 +322,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reDeCHO/Pods-reDeCHO-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4176C57CCAA03DD7A850BD3A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9A4DFF3BD043A37A2A166310 /* [CP] Copy Pods Resources */ = {
+		5D3C687A68CBEB3A88E4708B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -346,7 +339,46 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C2928ED6AE35B629CF951675 /* [CP] Copy Pods Resources */ = {
+		A78E761713D922CEE19F565D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-reDeCHO-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C548D62F27084787A9054886 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3A4EE3EA4F079EE1BF728A9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,7 +395,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reDeCHO/Pods-reDeCHO-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CC8D9E6A3C1BB5C3F39263D3 /* [CP] Check Pods Manifest.lock */ = {
+		E03FF9ABBCB046500EFCF58E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,28 +411,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-reDeCHO-reDeCHOTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F85B1F0FF48C7399FE3AAF38 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-reDeCHO-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -434,7 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* reDeCHOTests.m in Sources */,
-				0ABCC9FBCCB4A9603C179B59 /* ExpoModulesProvider.swift in Sources */,
+				FCE91192EADB056C597ABC52 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,9 +452,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4E9B6E2790B37300D25D2F /* RCTAlgo.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				8375202F152788FFFD651BB6 /* ExpoModulesProvider.swift in Sources */,
+				D3BB6341E16573EAEBDF14A4 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +472,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 162AA11F15EB540A38AFF485 /* Pods-reDeCHO-reDeCHOTests.debug.xcconfig */;
+			baseConfigurationReference = 8661C7732E0C5CC819530ACF /* Pods-reDeCHO-reDeCHOTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -488,7 +499,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D172E6E5AB86F60BF19F4101 /* Pods-reDeCHO-reDeCHOTests.release.xcconfig */;
+			baseConfigurationReference = B3D7813CA60D02EF79C41517 /* Pods-reDeCHO-reDeCHOTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -512,7 +523,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEFC295EDD8584847C027247 /* Pods-reDeCHO.debug.xcconfig */;
+			baseConfigurationReference = 104BF0E8002E4DE924D7DE62 /* Pods-reDeCHO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -538,7 +549,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F74E3820E2BAF616C0B0D7EC /* Pods-reDeCHO.release.xcconfig */;
+			baseConfigurationReference = 63306FA49A0F7CBAC618BB12 /* Pods-reDeCHO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -716,6 +727,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C4E9B6A2790B34000D25D2F /* XCRemoteSwiftPackageReference "Swift-Algorand-Sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Jesulonimi21/Swift-Algorand-Sdk.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C4E9B6B2790B34100D25D2F /* swift-algorand-sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C4E9B6A2790B34000D25D2F /* XCRemoteSwiftPackageReference "Swift-Algorand-Sdk" */;
+			productName = "swift-algorand-sdk";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }
