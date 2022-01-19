@@ -12,7 +12,8 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2C4E9B6C2790B34100D25D2F /* swift-algorand-sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 2C4E9B6B2790B34100D25D2F /* swift-algorand-sdk */; };
-		2C4E9B6E2790B37300D25D2F /* RCTAlgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E9B6D2790B37300D25D2F /* RCTAlgo.swift */; };
+		328834FB27982946007E3EE0 /* RNAlgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328834FA27982946007E3EE0 /* RNAlgo.swift */; };
+		328834FD27982955007E3EE0 /* RNAlgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 328834FC27982955007E3EE0 /* RNAlgo.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		946114A3BDB60862DF405472 /* libPods-reDeCHO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77970473A6E03E34ED7BCC9F /* libPods-reDeCHO.a */; };
 		AF161A9E2452AC803C90D33C /* libPods-reDeCHO-reDeCHOTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E93983AF4E2F54B39C29F5C2 /* libPods-reDeCHO-reDeCHOTests.a */; };
@@ -41,7 +42,9 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = reDeCHO/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = reDeCHO/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = reDeCHO/main.m; sourceTree = "<group>"; };
-		2C4E9B6D2790B37300D25D2F /* RCTAlgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCTAlgo.swift; sourceTree = "<group>"; };
+		328834FA27982946007E3EE0 /* RNAlgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNAlgo.swift; sourceTree = "<group>"; };
+		328834FC27982955007E3EE0 /* RNAlgo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNAlgo.m; sourceTree = "<group>"; };
+		328834FE2798296E007E3EE0 /* reDeCHO-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "reDeCHO-Bridging-Header.h"; sourceTree = "<group>"; };
 		58C478E22894C904867865DF /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-reDeCHO-reDeCHOTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		63306FA49A0F7CBAC618BB12 /* Pods-reDeCHO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO.release.xcconfig"; path = "Target Support Files/Pods-reDeCHO/Pods-reDeCHO.release.xcconfig"; sourceTree = "<group>"; };
 		77970473A6E03E34ED7BCC9F /* libPods-reDeCHO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reDeCHO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,7 +146,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				2C4E9B6D2790B37300D25D2F /* RCTAlgo.swift */,
+				328834FE2798296E007E3EE0 /* reDeCHO-Bridging-Header.h */,
+				328834FC27982955007E3EE0 /* RNAlgo.m */,
+				328834FA27982946007E3EE0 /* RNAlgo.swift */,
 				13B07FAE1A68108700A75B9A /* reDeCHO */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* reDeCHOTests */,
@@ -293,7 +298,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -452,9 +457,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C4E9B6E2790B37300D25D2F /* RCTAlgo.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				328834FD27982955007E3EE0 /* RNAlgo.m in Sources */,
+				328834FB27982946007E3EE0 /* RNAlgo.swift in Sources */,
 				D3BB6341E16573EAEBDF14A4 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,6 +547,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = reDeCHO;
+				SWIFT_OBJC_BRIDGING_HEADER = "reDeCHO-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -566,6 +573,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = reDeCHO;
+				SWIFT_OBJC_BRIDGING_HEADER = "reDeCHO-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
