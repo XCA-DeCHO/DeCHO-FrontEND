@@ -26,11 +26,10 @@ function NewWalletSuccess({navigation}) {
   const {RNAlgo} = NativeModules;
 
   if (!status) {
-    const a = RNAlgo.createAccount();
-    console.log('Omoooo: ', RNAlgo.helloWorld());
-    setInfo(a);
-    console.log('Error: ', a);
-    setStatus(true);
+    RNAlgo.createAccount(accountInfo => {
+      setStatus(true);
+      setInfo(accountInfo);
+    });
   }
 
   return (

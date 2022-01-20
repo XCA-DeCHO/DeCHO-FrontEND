@@ -20,15 +20,10 @@ class RNAlgo: NSObject {
   @objc static func requiresMainQueueSetup() -> Bool {
       return false
   }
-  
+
   @objc
-  func createAccount() -> [String: String] {
+  func createAccount(_ callback: RCTResponseSenderBlock){
     let account = try! Account();
-    return ["mnemonic": account.toMnemonic(), "address": account.getAddress().description]
-  }
-  
-  @objc
-  func hellWorld() -> String {
-    return "Hello World"
+    callback([["address":account.getAddress().description, "mnemonic":account.toMnemonic()]]);
   }
 }
