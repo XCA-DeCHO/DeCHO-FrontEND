@@ -20,15 +20,21 @@ class RNAlgo: NSObject {
   @objc static func requiresMainQueueSetup() -> Bool {
       return false
   }
-  
+
   @objc
   func createAccount() -> [String: String] {
     let account = try! Account();
     return ["mnemonic": account.toMnemonic(), "address": account.getAddress().description]
   }
-  
+
   @objc
   func hellWorld() -> String {
     return "Hello World"
   }
+
+  @objc
+  func useCallBackEniola(_ callback: RCTResponseSenderBlock) {
+      callback(["Use Callback Eniola. Also, Don't forget the underscore, it's Important"])
+  }
+
 }

@@ -26,11 +26,17 @@ function NewWalletSuccess({navigation}) {
   const {RNAlgo} = NativeModules;
 
   if (!status) {
-    const a = RNAlgo.createAccount();
-    console.log('Omoooo: ', RNAlgo.helloWorld());
-    setInfo(a);
-    console.log('Error: ', a);
-    setStatus(true);
+    //do this here
+    //reference for callback from your genius pm
+    //https://around25.com/blog/how-to-write-native-modules-for-react-native/
+    RNAlgo.useCallBackEniola(message => {
+      console.log(message)
+    })
+    // const a = RNAlgo.createAccount();
+    // console.log('Omoooo: ', RNAlgo.helloWorld());
+    // setInfo(a);
+    // console.log('Error: ', a);
+    // setStatus(true);
   }
 
   return (

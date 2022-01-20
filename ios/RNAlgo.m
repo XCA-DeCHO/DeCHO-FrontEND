@@ -12,5 +12,7 @@
 
 RCT_EXTERN_METHOD(createAccount)
 RCT_EXTERN_METHOD(helloWorld)
+//CallBack is Nice.
+RCT_EXTERN_METHOD(useCallBackEniola: (RCTResponseSenderBlock)callback)
 
 @end
