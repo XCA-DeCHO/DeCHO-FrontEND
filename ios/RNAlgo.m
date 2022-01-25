@@ -10,9 +10,6 @@
 
 @interface RCT_EXTERN_MODULE(RNAlgo, NSObject)
 
-RCT_EXTERN_METHOD(createAccount)
-RCT_EXTERN_METHOD(helloWorld)
-//CallBack is Nice.
-RCT_EXTERN_METHOD(useCallBackEniola: (RCTResponseSenderBlock)callback)
+RCT_EXTERN_METHOD(createAccount: (RCTResponseSenderBlock *)callback)
 
 @end

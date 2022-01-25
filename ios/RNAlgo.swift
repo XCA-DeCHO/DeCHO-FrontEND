@@ -22,19 +22,8 @@ class RNAlgo: NSObject {
   }
 
   @objc
-  func createAccount() -> [String: String] {
+  func createAccount(_ callback: RCTResponseSenderBlock){
     let account = try! Account();
-    return ["mnemonic": account.toMnemonic(), "address": account.getAddress().description]
+    callback([["address":account.getAddress().description, "mnemonic":account.toMnemonic()]]);
   }
-
-  @objc
-  func hellWorld() -> String {
-    return "Hello World"
-  }
-
-  @objc
-  func useCallBackEniola(_ callback: RCTResponseSenderBlock) {
-      callback(["Use Callback Eniola. Also, Don't forget the underscore, it's Important"])
-  }
-
 }

@@ -8,6 +8,6 @@
 #ifndef reDeCHO_Bridging_Header_h
 #define reDeCHO_Bridging_Header_h
 
+#import "React/RCTBridgeModule.h"
 
 #endif /* reDeCHO_Bridging_Header_h */
-#import "React/RCTBridgeModule.h"
