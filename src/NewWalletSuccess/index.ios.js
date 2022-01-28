@@ -76,20 +76,21 @@ function NewWalletSuccess({navigation}) {
             }}
             flexDirection={'row'}
             background={colors.grey}
-            p={5}
+            p={2}
             borderRadius={'md'}
+            alignItems={'center'}
             justifyContent={'space-between'}>
             <Text
               color={colors.black}
-              fontSize={'14'}
+              fontSize={'9'}
               fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
               {info.address}
             </Text>
             <Image
               source={copy}
               alt="applause"
-              h="5"
-              w="5"
+              h="1"
+              w="1"
               alignSelf={'center'}
             />
           </Pressable>
