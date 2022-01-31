@@ -55,6 +55,9 @@ function AnonymousApproval({navigation}) {
       flatListRef.current.scrollToIndex({animated: true, index: index + 1});
     } catch (error) {
       flatListRef.current.scrollToIndex({animated: true, index: index});
+      toast.show({
+        description: 'You have gotten to the end of the list',
+      });
     }
   };
 
