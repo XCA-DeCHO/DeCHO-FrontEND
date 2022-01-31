@@ -16,46 +16,50 @@ function ProceedWallet({ navigation }) {
           <ScrollView background={colors.white} style={{ flex: 1 }}>
               <VStack w="100%" h="100%" px={5} pt={10}>
                   <Text
+                    mt={5}
                     mb={5}
                     color={colors.black}
                     fontSize={'30'}
                     fontWeight={'500'}
-                    fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
+                    fontFamily={'JosefinSans-Bold'}>
                       DeCHO
                   </Text>
                   <Text
                     mb={5}
                     color={colors.black}
-                    fontSize={'20'}
-                    fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
+                    fontSize={'14'}
+                    fontFamily={'JosefinSans-Regular'}>
                       How do you want to proceed?
                   </Text>
                   <Button
                     my={5}
-                    variant={'outline'}
+                    variant={'subtle'}
+
                     onPress={() => {
-                        navigation.navigate('ConnectWallet');
+                        //navigation.navigate('ConnectWallet');
+                        null;
                     }}
                     colorScheme="teal">
                       <Text
                         fontSize={'16'}
                         color={colors.teal}
-                        fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
+                        fontFamily={'JosefinSans-Regular'}>
                           Use Existing Wallet
                       </Text>
                   </Button>
                   <Button
                     my={5}
-                    variant={'outline'}
+                    variant={'subtle'}
+                    _disabled={true}
                     onPress={() => {
-                        navigation.navigate('NewWalletSuccess');
+                        //navigation.navigate('NewWalletSuccess');
                     }}
                     colorScheme="teal">
                       <Text
                         fontSize={'16'}
                         color={colors.teal}
-                        fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
-                          Generate a new Wallet (recommended)
+                        fontFamily={'JosefinSans-Regular'}>
+                          Generate a new Wallet
                       </Text>
                   </Button>
                   <Button my={5} variant={'outline'}
@@ -66,20 +70,20 @@ function ProceedWallet({ navigation }) {
                       <Text
                         fontSize={'16'}
                         color={colors.teal}
-                        fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
+                        fontFamily={'JosefinSans-Regular'}>
                           Stay Anonymous
                       </Text>
                   </Button>
                   <Divider my={5} />
-                  <Text fontSize={'16'} fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
+                  <Text fontSize={'16'} fontFamily={'JosefinSans-Regular'}>
                       Generate a new Wallet allows you operate and use majority of the
                       functions inside the app.
                   </Text>
-                  <Text fontSize={'16'} fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
+                  <Text fontSize={'16'} fontFamily={'JosefinSans-Regular'}>
                       {'\n'}Staying Anonymous, you will only be able to use your external
                       wallet to make transactions.
                   </Text>
-                  <Text fontSize={'16'} fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
+                  <Text fontSize={'16'} fontFamily={'JosefinSans-Regular'}>
                       {'\n'}Using an Existing wallet, you give the app authority to make
                       the permitted transactions on your behalf.
                   </Text>

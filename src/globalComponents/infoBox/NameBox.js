@@ -19,15 +19,15 @@ function NameBox(props) {
             color={colors.black}
             fontSize={'24'}
             fontWeight={'500'}
-            fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
-            {props.name}
+            fontFamily={'JosefinSans-Bold'}>
+              {props.name}
           </Text>
           <Text
             mb={1}
             color={colors.grey}
             fontSize={'12'}
-            fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
-            {props.slogan}
+            fontFamily={'JosefinSans-Regular'}>
+              {props.slogan}
           </Text>
         </LinearGradient>
       </ImageBackground>
