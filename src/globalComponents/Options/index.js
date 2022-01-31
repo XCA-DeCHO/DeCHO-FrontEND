@@ -38,30 +38,30 @@ function Options({ navigation }) {
         <VStack w={'100%'} h={'100%'} px={5} pt={10} space={3}>
           <TouchableOpacity
                   onPress={()=>{navigation.goBack()}}>
-            <Text p={2}>{'<< Go Back'}</Text>
+            <Text p={2} fontFamily={'JosefinSans-Bold'}>{'<< Go Back'}</Text>
           </TouchableOpacity>
           <Text
             color={colors.black}
             fontSize={'30'}
-            fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''} mx={2}>
+            fontFamily={'JosefinSans-Bold'} mx={2}>
             Settings
           </Text>
         <Divider/>
           <VStack space={10} p={2}>
           <TouchableOpacity
                   onPress={()=>{navigation.navigate('ProceedWallet')}}>
-            <Text fontSize={25} fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''} >Disconnect</Text>
+            <Text fontSize={20} fontFamily={'JosefinSans-Regular'} >Disconnect</Text>
           </TouchableOpacity>
           <TouchableOpacity
                   onPress={()=>{navigation.goBack()}}>
-            <Text fontSize={25} fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''} >Contact Us</Text>
+            <Text fontSize={20} fontFamily={'JosefinSans-Regular'} >Contact Us</Text>
           </TouchableOpacity></VStack>
           <Divider/>
           <Button variant={'link'}
                   my={2}
                   onPress={()=>{navigation.goBack()}}
                   colorScheme={'muted'} alignSelf={'center'}>
-            <Text fontSize={20} color={colors.grey} fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''} >Visit our website</Text>
+            <Text fontSize={20} color={colors.grey} fontFamily={'JosefinSans-Bold'} >Visit our website</Text>
           </Button>
           {/*<Divider/>*/}
           {/*<Text*/}

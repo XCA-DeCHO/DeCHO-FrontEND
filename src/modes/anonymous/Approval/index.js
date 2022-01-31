@@ -1,17 +1,17 @@
 import React from 'react';
 import {
-  Button,
-  HStack,
-  Image,
-  useToast,
-  Modal,
-  Pressable,
-  Progress,
-  ScrollView,
-  Text,
-  VStack,
-  Input,
-  FlatList,
+    Button,
+    HStack,
+    Image,
+    useToast,
+    Modal,
+    Pressable,
+    Progress,
+    ScrollView,
+    Text,
+    VStack,
+    Input,
+    FlatList, Spinner,
 } from 'native-base';
 import {Platform, TouchableOpacity, Dimensions} from 'react-native';
 import colors from '../../../utils/colors';
@@ -19,6 +19,7 @@ import Clipboard from '@react-native-clipboard/clipboard';
 import NameBox from '../../../globalComponents/infoBox/NameBox';
 import ProgressBox from '../../../globalComponents/ProgressBox/ProgressBox';
 import {TestData} from '../../../utils/data';
+import info from "../../../../assets/images/approval/info.png";
 
 function AnonymousApproval({navigation}) {
   const settings = require('../../../../assets/images/settings.png');
@@ -35,6 +36,19 @@ function AnonymousApproval({navigation}) {
   const [approvals, setApprovals] = React.useState(null);
   const [address, setAddress] = React.useState('');
 
+  //adding dynamic date greeting
+    let today = new Date();
+    let nowHour = today.getHours();
+    let greetingString;
+    if(nowHour < 12){
+        greetingString = 'morning';
+    }else if(nowHour > 12 & nowHour < 17){
+        greetingString = 'afternoon'
+    }else{
+        greetingString = 'evening'
+    }
+
+
   if (!approvals) {
     fetch('https://decho-staging.herokuapp.com/api/v1/causes')
       .then(response => response.json())
@@ -42,6 +56,62 @@ function AnonymousApproval({navigation}) {
         setApprovals(responseData.data);
       })
       .catch(error => console.log(error));
+  }
+
+  function checkLoading(){
+      if (!approvals) {
+          return(<Spinner/>);
+      } else{
+          return(
+              <FlatList
+                  data={approvals}
+                  horizontal
+                  showsHorizontalScrollIndicator={false}
+                  pagingEnabled
+
+                  renderItem={({item}) => {
+                      return (
+                          <VStack w={width} px={5} py={1}>
+                              <NameBox
+                                  name={item.title}
+                                  slogan={item.short_description}
+                                  img={TestData[0].image}
+                              />
+                              <HStack
+                                  justifyContent={'center'}
+                                  alignItems={'center'}
+                                  space={5}
+                                  mt={10}>
+                                  <TouchableOpacity
+                                      onPress={() => {
+                                          navigation.navigate('ViewInfo');
+                                      }}>
+                                      <Image source={info} alt={'info'} size={7} />
+                                  </TouchableOpacity>
+                                  <TouchableOpacity
+                                      onPress={() => {
+                                          setAddress(item.decho_wallet.address);
+                                          setShowModal(true);
+                                      }}>
+                                      <Image source={dLogo} alt={'donate'} size={10} />
+                                  </TouchableOpacity>
+                                  <TouchableOpacity>
+                                      <Image source={close} alt={'disprove'} size={7} />
+                                  </TouchableOpacity>
+                              </HStack>
+                              <ProgressBox
+                                  progress={item.progress || 0}
+                                  goal={item.cause_approval.goal}
+                                  prefix={''}
+                              />
+                          </VStack>
+                      );
+                  }}
+              />
+
+          );
+      }
+
   }
 
   return (
@@ -65,57 +135,15 @@ function AnonymousApproval({navigation}) {
           color={colors.black}
           fontSize={'24'}
           fontWeight={'500'}
-          fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
-          Hi, Good morning.
+          fontFamily={'JosefinSans-Bold'}>
+          Hi, Good {greetingString}.
         </Text>
-        <Input mx={5} placeholder={'Search....'} />
+        {/*  Commented out the search */}
+        {/*<Input mx={5} placeholder={'Search....'} />*/}
         <Text fontSize={10} px={5}>
           Swipe left to see more >>
         </Text>
-        <FlatList
-          data={approvals}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          pagingEnabled
-          renderItem={({item}) => {
-            return (
-              <VStack w={width} px={5} py={1}>
-                <NameBox
-                  name={item.title}
-                  slogan={item.short_description}
-                  img={TestData[0].image}
-                />
-                <HStack
-                  justifyContent={'center'}
-                  alignItems={'center'}
-                  space={5}
-                  mt={10}>
-                  <TouchableOpacity
-                    onPress={() => {
-                      navigation.navigate('ViewInfo');
-                    }}>
-                    <Image source={info} alt={'info'} size={7} />
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    onPress={() => {
-                      setAddress(item.decho_wallet.address);
-                      setShowModal(true);
-                    }}>
-                    <Image source={dLogo} alt={'donate'} size={10} />
-                  </TouchableOpacity>
-                  <TouchableOpacity>
-                    <Image source={close} alt={'disprove'} size={7} />
-                  </TouchableOpacity>
-                </HStack>
-                <ProgressBox
-                  progress={item.progress || 0}
-                  goal={item.cause_approval.goal}
-                  prefix={'$'}
-                />
-              </VStack>
-            );
-          }}
-        />
+          { checkLoading() }
         <TouchableOpacity
           onPress={() => {
             navigation.navigate('AnonymousDonate');
@@ -125,7 +153,7 @@ function AnonymousApproval({navigation}) {
             my={5}
             color={colors.black}
             fontSize={'12'}
-            fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}
+            fontFamily={'JosefinSans-Regular'}
             alignSelf={'flex-end'}>
             View approved projects>>
           </Text>
@@ -140,7 +168,7 @@ function AnonymousApproval({navigation}) {
               my={2}
               color={colors.black}
               fontSize={'16'}
-              fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
+              fontFamily={'JosefinSans-Regular'}>
               Make your vote towards this project by sending CHOICE to this
               address.
               {'\n'}Your Choice will be refunded and rewarded!
@@ -154,20 +182,20 @@ function AnonymousApproval({navigation}) {
               }}
               flexDirection={'row'}
               background={colors.grey}
-              p={5}
+              p={2}
               borderRadius={'md'}
               justifyContent={'space-between'}>
               <Text
                 color={colors.black}
-                fontSize={'12'}
-                fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
-                {address}
+                fontSize={'7'}
+                fontFamily={'JosefinSans-Regular'}>
+                  {address}
               </Text>
               <Image
                 source={copy}
                 alt="applause"
-                h="5"
-                w="5"
+                h="3"
+                w="3"
                 alignSelf={'center'}
               />
             </Pressable>
