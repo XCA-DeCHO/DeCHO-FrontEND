@@ -172,7 +172,7 @@ function AnonymousApproval({navigation}) {
         </TouchableOpacity>
       </VStack>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-        <Modal.Content w={'80%'}>
+        <Modal.Content w={'95%'}>
           <Modal.CloseButton />
           <Modal.Header>Vote</Modal.Header>
           <Modal.Body>
@@ -194,12 +194,13 @@ function AnonymousApproval({navigation}) {
               }}
               flexDirection={'row'}
               background={colors.grey}
-              p={2}
+              px={1}
+              py={5}
               borderRadius={'md'}
-              justifyContent={'space-between'}>
+              justifyContent={'space-around'}>
               <Text
                 color={colors.black}
-                fontSize={'7'}
+                fontSize={'8'}
                 fontFamily={'JosefinSans-Regular'}>
                 {address}
               </Text>

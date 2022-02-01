@@ -140,14 +140,14 @@ function AnonymousDonate({navigation}) {
             m={5}
             color={colors.black}
             fontSize={'12'}
-            fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}
+            fontFamily={'JosefinSans-Regular'}
             alignSelf={'flex-start'}>
             {'<< View unapproved projects'}
           </Text>
         </TouchableOpacity>
       </VStack>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-        <Modal.Content w={'80%'}>
+        <Modal.Content w={'95%'}>
           <Modal.CloseButton />
           <Modal.Header>Vote</Modal.Header>
           <Modal.Body>
@@ -155,7 +155,7 @@ function AnonymousDonate({navigation}) {
               my={2}
               color={colors.black}
               fontSize={'16'}
-              fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
+              fontFamily={'JosefinSans-Regular'}>
               Make your vote towards this project by sending ALGO to this
               address.
               {'\n'}Your Algo will be refunded if this project does not reach
@@ -170,20 +170,21 @@ function AnonymousDonate({navigation}) {
               }}
               flexDirection={'row'}
               background={colors.grey}
-              p={5}
+              py={5}
+              px={2}
               borderRadius={'md'}
-              justifyContent={'space-between'}>
+              justifyContent={'space-around'}>
               <Text
                 color={colors.black}
-                fontSize={'12'}
-                fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
+                fontSize={'8'}
+                fontFamily={'JosefinSans-Regular'}>
                 {address}
               </Text>
               <Image
                 source={copy}
                 alt="applause"
-                h="5"
-                w="5"
+                h="3"
+                w="3"
                 alignSelf={'center'}
               />
             </Pressable>
