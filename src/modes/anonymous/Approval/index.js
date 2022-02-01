@@ -120,7 +120,7 @@ function AnonymousApproval({navigation}) {
                 <ProgressBox
                   progress={item.progress || 0}
                   goal={item.cause_approval.goal}
-                  prefix={'$'}
+                  prefix={''}
                 />
               </VStack>
             );

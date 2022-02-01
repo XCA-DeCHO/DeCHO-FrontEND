@@ -22,7 +22,7 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NativeBaseProvider>
-      <StatusBar translucent/>
+      <StatusBar translucent backgroundColor={'transparent'}/>
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
