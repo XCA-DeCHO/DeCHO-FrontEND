@@ -99,7 +99,10 @@ function AnonymousApproval({navigation}) {
                   mt={10}>
                   <TouchableOpacity
                     onPress={() => {
-                      navigation.navigate('ViewInfo');
+                      navigation.navigate('ViewInfo', {
+                        item,
+                        testImage: TestData[0].image,
+                      });
                     }}>
                     <Image source={info} alt={'info'} size={7} />
                   </TouchableOpacity>
@@ -117,7 +120,7 @@ function AnonymousApproval({navigation}) {
                 <ProgressBox
                   progress={item.progress || 0}
                   goal={item.cause_approval.goal}
-                  prefix={''}
+                  prefix={'$'}
                 />
               </VStack>
             );
