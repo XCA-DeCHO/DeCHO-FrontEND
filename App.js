@@ -15,12 +15,14 @@ import Options from './src/globalComponents/Options'
 import AnonymousDonate from "./src/modes/anonymous/Donate";
 
 import { NativeBaseProvider } from 'native-base/src/core/NativeBaseProvider';
+import { StatusBar } from 'native-base';
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NativeBaseProvider>
+      <StatusBar translucent/>
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
