@@ -1,17 +1,18 @@
 import React, {useEffect} from 'react';
 import {
-    Button,
-    HStack,
-    Image,
-    useToast,
-    Modal,
-    Pressable,
-    Progress,
-    ScrollView,
-    Text,
-    VStack,
-    Input,
-    FlatList, Spinner,
+  Button,
+  HStack,
+  Image,
+  useToast,
+  Modal,
+  Pressable,
+  Progress,
+  ScrollView,
+  Text,
+  VStack,
+  Input,
+  FlatList,
+  Spinner,
 } from 'native-base';
 import {Dimensions, Platform, TouchableOpacity} from 'react-native';
 import {
@@ -25,9 +26,9 @@ import Clipboard from '@react-native-clipboard/clipboard';
 import NameBox from '../../../globalComponents/infoBox/NameBox';
 import ProgressBox from '../../../globalComponents/ProgressBox/ProgressBox';
 import {TestData} from '../../../utils/data';
-import info from "../../../../assets/images/approval/info.png";
-import dLogo from "../../../../assets/images/approval/check.png";
-import close from "../../../../assets/images/approval/close.png";
+import info from '../../../../assets/images/approval/info.png';
+import dLogo from '../../../../assets/images/approval/check.png';
+import close from '../../../../assets/images/approval/close.png';
 
 function AnonymousDonate({navigation}) {
   const settings = require('../../../../assets/images/settings.png');
@@ -46,62 +47,63 @@ function AnonymousDonate({navigation}) {
 
   if (!approvals) {
     fetch('https://decho-staging.herokuapp.com/api/v1/causes')
-      .then(response => response.json())
-      .then(responseData => {
-        setApprovals(responseData.data);
+      .then((response) => response.json())
+      .then((responseData) => {
+        setApprovals(
+          responseData.data.filter((cause) => cause.status === 'Approved'),
+        );
       })
-      .catch(error => console.log(error));
+      .catch((error) => console.log(error));
   }
 
-    function checkLoading(){
-        if (!approvals) {
-            return(<Spinner/>);
-        } else{
-            return(
-                <FlatList
-                    data={approvals}
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    pagingEnabled
-                    renderItem={({item}) => {
-                        return (
-                            <VStack w={width} px={5} py={1}>
-                                <NameBox
-                                    name={item.title}
-                                    slogan={item.short_description}
-                                    img={TestData[0].image}
-                                />
-                                <HStack
-                                    justifyContent={'center'}
-                                    alignItems={'center'}
-                                    space={5}
-                                    mt={10}></HStack>
-                                <ProgressBox
-                                    progress={item.progress || 100}
-                                    goal={item.donations.goal}
-                                    prefix={'$'}
-                                />
-                                <Button
-                                    my={2}
-                                    colorScheme={'teal'}
-                                    onPress={() => {
-                                        setAddress(item.decho_wallet.address);
-                                        setShowModal(true);
-                                    }}>
-                                    <Text fontFamily={'JosefinSans-Regular'} color={colors.white}>Donate</Text>
-                                </Button>
-                            </VStack>
-                        );
-                    }}
+  function checkLoading() {
+    if (!approvals) {
+      return <Spinner />;
+    } else {
+      return (
+        <FlatList
+          data={approvals}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          pagingEnabled
+          renderItem={({item}) => {
+            return (
+              <VStack w={width} px={5} py={1}>
+                <NameBox
+                  name={item.title}
+                  slogan={item.short_description}
+                  img={TestData[0].image}
                 />
-
+                <HStack
+                  justifyContent={'center'}
+                  alignItems={'center'}
+                  space={5}
+                  mt={10}></HStack>
+                <ProgressBox
+                  progress={item.progress || 100}
+                  goal={item.donations.goal}
+                  prefix={'$'}
+                />
+                <Button
+                  my={2}
+                  colorScheme={'teal'}
+                  onPress={() => {
+                    setAddress(item.decho_wallet.address);
+                    setShowModal(true);
+                  }}>
+                  <Text fontFamily={'JosefinSans-Regular'} color={colors.white}>
+                    Donate
+                  </Text>
+                </Button>
+              </VStack>
             );
-        }
-
+          }}
+        />
+      );
     }
+  }
 
-
-    return (
+  return (
     <ScrollView bg={colors.white}>
       <VStack w={'100%'} h={'100%'} pt={10} space={3}>
         <TouchableOpacity
@@ -123,13 +125,13 @@ function AnonymousDonate({navigation}) {
           fontSize={'24'}
           fontWeight={'500'}
           fontFamily={'JosefinSans-Regular'}>
-            Donate
+          Donate
         </Text>
         {/*<Input mx={5} placeholder={'Search....'} />*/}
         <Text fontSize={10} px={5}>
           Swipe left to see more >>
         </Text>
-          {checkLoading()}
+        {checkLoading()}
         <TouchableOpacity
           onPress={() => {
             navigation.goBack();
@@ -138,14 +140,14 @@ function AnonymousDonate({navigation}) {
             m={5}
             color={colors.black}
             fontSize={'12'}
-            fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}
+            fontFamily={'JosefinSans-Regular'}
             alignSelf={'flex-start'}>
             {'<< View unapproved projects'}
           </Text>
         </TouchableOpacity>
       </VStack>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-        <Modal.Content w={'80%'}>
+        <Modal.Content w={'95%'}>
           <Modal.CloseButton />
           <Modal.Header>Vote</Modal.Header>
           <Modal.Body>
@@ -153,7 +155,7 @@ function AnonymousDonate({navigation}) {
               my={2}
               color={colors.black}
               fontSize={'16'}
-              fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
+              fontFamily={'JosefinSans-Regular'}>
               Make your vote towards this project by sending ALGO to this
               address.
               {'\n'}Your Algo will be refunded if this project does not reach
@@ -168,20 +170,21 @@ function AnonymousDonate({navigation}) {
               }}
               flexDirection={'row'}
               background={colors.grey}
-              p={5}
+              py={5}
+              px={2}
               borderRadius={'md'}
-              justifyContent={'space-between'}>
+              justifyContent={'space-around'}>
               <Text
                 color={colors.black}
-                fontSize={'12'}
-                fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>
+                fontSize={'8'}
+                fontFamily={'JosefinSans-Regular'}>
                 {address}
               </Text>
               <Image
                 source={copy}
                 alt="applause"
-                h="5"
-                w="5"
+                h="3"
+                w="3"
                 alignSelf={'center'}
               />
             </Pressable>
