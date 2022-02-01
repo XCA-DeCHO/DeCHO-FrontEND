@@ -1,4 +1,5 @@
 import React, {useRef} from 'react';
+
 import {
   Button,
   HStack,
@@ -20,7 +21,7 @@ import Clipboard from '@react-native-clipboard/clipboard';
 import NameBox from '../../../globalComponents/infoBox/NameBox';
 import ProgressBox from '../../../globalComponents/ProgressBox/ProgressBox';
 import {TestData} from '../../../utils/data';
-import info from '../../../../assets/images/approval/info.png';
+import QRCode from "react-native-qrcode-svg";
 
 function AnonymousApproval({navigation}) {
   const settings = require('../../../../assets/images/settings.png');
@@ -28,7 +29,7 @@ function AnonymousApproval({navigation}) {
   const info = require('../../../../assets/images/approval/info.png');
   const dLogo = require('../../../../assets/images/approval/check.png');
   const copy = require('../../../../assets/images/connectWallet/copy.png');
-
+  const logo = require('../../../../assets/images/logo/DechoLogomarkgradientlogomark.png')
   const toast = useToast();
 
   const width = Dimensions.get('window').width;
@@ -153,7 +154,7 @@ function AnonymousApproval({navigation}) {
         {/*  Commented out the search */}
         {/*<Input mx={5} placeholder={'Search....'} />*/}
         <Text fontSize={10} px={5}>
-          Swipe left to see more >>
+          Swipe left to see more{'>>'}
         </Text>
         {checkLoading()}
         <TouchableOpacity
@@ -167,7 +168,7 @@ function AnonymousApproval({navigation}) {
             fontSize={'12'}
             fontFamily={'JosefinSans-Regular'}
             alignSelf={'flex-end'}>
-            View approved projects>>
+            View approved projects{'>>'}
           </Text>
         </TouchableOpacity>
       </VStack>
@@ -185,6 +186,18 @@ function AnonymousApproval({navigation}) {
               address.
               {'\n'}Your Choice will be refunded and rewarded!
             </Text>
+            <HStack alignSelf={'center'} p={1} m={2} borderWidth={3} 
+            borderColor={colors.grey}
+            borderRadius={'sm'}>
+              <QRCode
+                  value={address}
+                  size={250}
+                  logo={logo}
+                  logoBackgroundColor={colors.white}
+                  logoBorderRadius={800}
+                  color={colors.grey}
+                  />
+            </HStack>
             <Pressable
               onPress={() => {
                 Clipboard.setString(address);

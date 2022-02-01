@@ -1089,7 +1089,7 @@
 
 "@expo-google-fonts/josefin-sans@^0.2.0":
   version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@expo-google-fonts/josefin-sans/-/josefin-sans-0.2.0.tgz#5021ab0d50d5f0ac896d7f0fd55b0219191d42c3"
+  resolved "https://registry.npmjs.org/@expo-google-fonts/josefin-sans/-/josefin-sans-0.2.0.tgz"
   integrity sha512-MWbTCrhC11XA+IDQ0rSf/MUD0eZ5bqTbPZAy4KJLcP1amlDsMPyFh6Xqx2yYmlq87UfUSEwqsiJf62Z0KpGfMA==
 
 "@expo/config-plugins@4.0.15":
@@ -3683,6 +3683,14 @@ cosmiconfig@^5.0.5, cosmiconfig@^5.1.0:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
+create-react-class@^15.6.3:
+  version "15.7.0"
+  resolved "https://registry.npmjs.org/create-react-class/-/create-react-class-15.7.0.tgz"
+  integrity sha512-QZv4sFWG9S5RUvkTYWbflxeZX+JG7Cz0Tn33rQBJ+WFQTqTfUTjMjiv9tnfXazjsO5r0KhPs+AqCjyrQX6h2ng==
+  dependencies:
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
+
 cross-spawn@^6.0.0, cross-spawn@^6.0.5:
   version "6.0.5"
   resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-6.0.5.tgz"
@@ -3877,6 +3885,11 @@ diff-sequences@^26.6.2:
   resolved "https://registry.npmjs.org/diff-sequences/-/diff-sequences-26.6.2.tgz"
   integrity sha512-Mv/TDa3nZ9sbc5soK+OoA74BsS3mL37yixCvUAQkiuA4Wz6YtwP/K47n2rv2ovzHZvoiQeA5FTQOschKkEwB0Q==
 
+dijkstrajs@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/dijkstrajs/-/dijkstrajs-1.0.2.tgz#2e48c0d3b825462afe75ab4ad5e829c8ece36257"
+  integrity sha512-QV6PMaHTCNmKSeP6QoXhVTw9snc9VD8MulTT0Bd99Pacp4SS1cjcrYPgBPmibqKVtMJJfqC6XvOXgPMEEPH/fg==
+
 doctoc@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/doctoc/-/doctoc-1.4.0.tgz"
@@ -3988,6 +4001,11 @@ emoji-regex@~6.1.0:
   resolved "https://registry.npmjs.org/emoji-regex/-/emoji-regex-6.1.3.tgz"
   integrity sha1-7HmjlpsC0uzytyJUJ5v5m8eoOTI=
 
+encode-utf8@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/encode-utf8/-/encode-utf8-1.0.3.tgz#f30fdd31da07fb596f281beb2f6b027851994cda"
+  integrity sha512-ucAnuBEhUK4boH2HjVYG5Q2mQyPorvv0u/ocS+zhdw0S8AlHYY+GOFhP1Gio5z4icpP2ivFSvhtFjQi8+T9ppw==
+
 encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/encodeurl/-/encodeurl-1.0.2.tgz"
@@ -4096,15 +4114,15 @@ escape-html@~1.0.3:
   resolved "https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz"
   integrity sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
 
+escape-string-regexp@2.0.0, escape-string-regexp@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-2.0.0.tgz"
+  integrity sha512-UpzcLCXolUWcNu5HtVMHYdXJjArjsF9C0aNnquZYY4uW/Vu0miy5YoWvbV345HauVvcAUnpRuhMMcqTcGOY2+w==
+
 escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
-
-escape-string-regexp@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-2.0.0.tgz"
-  integrity sha512-UpzcLCXolUWcNu5HtVMHYdXJjArjsF9C0aNnquZYY4uW/Vu0miy5YoWvbV345HauVvcAUnpRuhMMcqTcGOY2+w==
 
 escape-string-regexp@^4.0.0:
   version "4.0.0"
@@ -5147,7 +5165,7 @@ intl-messageformat@^9.6.12:
     "@formatjs/icu-messageformat-parser" "2.0.16"
     tslib "^2.1.0"
 
-invariant@^2.2.4:
+invariant@2.2.4, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz"
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
@@ -6287,7 +6305,7 @@ logkitty@^0.7.1:
     dayjs "^1.8.15"
     yargs "^15.1.0"
 
-loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -7418,7 +7436,7 @@ prompts@^2.0.1, prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.7.2:
   version "15.8.0"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.0.tgz"
   integrity sha512-fDGekdaHh65eI3lMi5OnErU6a8Ighg2KjcjQxO7m8VHyWjcPyj5kiOgV1LQDOOOgVy3+5FgjXvdSSX7B8/5/4g==
@@ -7444,6 +7462,21 @@ punycode@^2.1.0, punycode@^2.1.1:
   version "2.1.1"
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
+
+qr.js@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.npmjs.org/qr.js/-/qr.js-0.0.0.tgz"
+  integrity sha1-ys6GOG9ZoNuAUPqQ2baw6IoeNk8=
+
+qrcode@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/qrcode/-/qrcode-1.5.0.tgz#95abb8a91fdafd86f8190f2836abbfc500c72d1b"
+  integrity sha512-9MgRpgVc+/+47dFvQeD6U2s0Z92EsKzcHogtum4QB+UNd025WOJSHvn/hjk9xmzj7Stj95CyUAs31mrjxliEsQ==
+  dependencies:
+    dijkstrajs "^1.0.1"
+    encode-utf8 "^1.0.3"
+    pngjs "^5.0.0"
+    yargs "^15.3.1"
 
 query-string@^7.0.0:
   version "7.0.1"
@@ -7525,6 +7558,23 @@ react-native-pager-view@^5.4.9:
   resolved "https://registry.npmjs.org/react-native-pager-view/-/react-native-pager-view-5.4.9.tgz"
   integrity sha512-D6tzxpwMGdl6CXgtskGWhKRc5cJakCazESRGt7PkqnpyiH3N35ft1KmR82pCSQetAFlytFiToeu3a/dG5CELvA==
 
+react-native-qrcode-generator@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/react-native-qrcode-generator/-/react-native-qrcode-generator-1.2.2.tgz"
+  integrity sha512-M75uyU3zL8yuL1ppL6OJsKBhL+VDZE3jNI5PAvDv+BCKa3MiSTTpXbGEqu7Y4xlhvFUozes/C0Ia7aS3mQ5w6Q==
+  dependencies:
+    create-react-class "^15.6.3"
+    prop-types "^15.5.10"
+    qr.js "^0.0.0"
+
+react-native-qrcode-svg@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-qrcode-svg/-/react-native-qrcode-svg-6.1.2.tgz#a7cb6c10199ab01418a7f7700ce17a6a014f544e"
+  integrity sha512-lMbbxoPVybXCp9SYm73Aj/0iZ9OlSZl2u+zpdbjgC4DYHBm9m9tDQxISNg1OPeR7AAzmyx8IV4JTFmk8G5R22g==
+  dependencies:
+    prop-types "^15.7.2"
+    qrcode "^1.5.0"
+
 react-native-safe-area-context@^3.3.2:
   version "3.3.2"
   resolved "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-3.3.2.tgz"
@@ -7540,11 +7590,19 @@ react-native-screens@^3.10.1:
 
 react-native-svg@^12.1.1:
   version "12.1.1"
-  resolved "https://registry.npmjs.org/react-native-svg/-/react-native-svg-12.1.1.tgz"
+  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-12.1.1.tgz#5f292410b8bcc07bbc52b2da7ceb22caf5bcaaee"
   integrity sha512-NIAJ8jCnXGCqGWXkkJ1GTzO4a3Md5at5sagYV8Vh4MXYnL4z5Rh428Wahjhh+LIjx40EE5xM5YtwyJBqOIba2Q==
   dependencies:
     css-select "^2.1.0"
     css-tree "^1.0.0-alpha.39"
+
+react-native-webview@^11.17.1:
+  version "11.17.1"
+  resolved "https://registry.npmjs.org/react-native-webview/-/react-native-webview-11.17.1.tgz"
+  integrity sha512-gGdBavATj8Mya2VYZtWtB9cgOAgVJJGlgL5mo/EO8quBeI5L3IBy2ZQolsCyRRGFTUPCc3Ah0OwJal0PjijGqw==
+  dependencies:
+    escape-string-regexp "2.0.0"
+    invariant "2.2.4"
 
 react-native@0.66.4:
   version "0.66.4"
