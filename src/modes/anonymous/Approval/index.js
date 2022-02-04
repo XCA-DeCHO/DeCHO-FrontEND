@@ -7,21 +7,18 @@ import {
   useToast,
   Modal,
   Pressable,
-  Progress,
   ScrollView,
   Text,
   VStack,
-  Input,
   FlatList,
   Spinner,
 } from 'native-base';
-import {Platform, TouchableOpacity, Dimensions} from 'react-native';
+import {TouchableOpacity, Dimensions} from 'react-native';
 import colors from '../../../utils/colors';
 import Clipboard from '@react-native-clipboard/clipboard';
 import NameBox from '../../../globalComponents/infoBox/NameBox';
 import ProgressBox from '../../../globalComponents/ProgressBox/ProgressBox';
-import {TestData} from '../../../utils/data';
-import QRCode from "react-native-qrcode-svg";
+import QRCode from 'react-native-qrcode-svg';
 
 function AnonymousApproval({navigation}) {
   const settings = require('../../../../assets/images/settings.png');
@@ -29,7 +26,7 @@ function AnonymousApproval({navigation}) {
   const info = require('../../../../assets/images/approval/info.png');
   const dLogo = require('../../../../assets/images/approval/check.png');
   const copy = require('../../../../assets/images/connectWallet/copy.png');
-  const logo = require('../../../../assets/images/logo/DechoLogomarkgradientlogomark.png')
+  const logo = require('../../../../assets/images/logo/DechoLogomarkgradientlogomark.png');
   const toast = useToast();
 
   const width = Dimensions.get('window').width;
@@ -90,7 +87,7 @@ function AnonymousApproval({navigation}) {
                 <NameBox
                   name={item.title}
                   slogan={item.short_description}
-                  img={TestData[0].image}
+                  img={item.photo_url}
                 />
                 <HStack
                   justifyContent={'center'}
@@ -101,7 +98,6 @@ function AnonymousApproval({navigation}) {
                     onPress={() => {
                       navigation.navigate('ViewInfo', {
                         item,
-                        testImage: TestData[0].image,
                       });
                     }}>
                     <Image source={info} alt={'info'} size={7} />
@@ -118,7 +114,7 @@ function AnonymousApproval({navigation}) {
                   </TouchableOpacity>
                 </HStack>
                 <ProgressBox
-                  progress={item.progress || 0}
+                  progress={item.balance}
                   goal={item.cause_approval.goal}
                   prefix={''}
                 />
@@ -189,17 +185,21 @@ function AnonymousApproval({navigation}) {
               address.
               {'\n'}Your Choice will be refunded and rewarded!
             </Text>
-            <HStack alignSelf={'center'} p={1} m={2} borderWidth={3} 
-            borderColor={colors.grey}
-            borderRadius={'sm'}>
+            <HStack
+              alignSelf={'center'}
+              p={1}
+              m={2}
+              borderWidth={3}
+              borderColor={colors.grey}
+              borderRadius={'sm'}>
               <QRCode
-                  value={address}
-                  size={250}
-                  logo={logo}
-                  logoBackgroundColor={colors.white}
-                  logoBorderRadius={800}
-                  color={colors.grey}
-                  />
+                value={address}
+                size={250}
+                logo={logo}
+                logoBackgroundColor={colors.white}
+                logoBorderRadius={800}
+                color={colors.grey}
+              />
             </HStack>
             <Pressable
               onPress={() => {
