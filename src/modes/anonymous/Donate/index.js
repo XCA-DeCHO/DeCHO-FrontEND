@@ -76,9 +76,11 @@ function AnonymousDonate({navigation}) {
                   space={5}
                   mt={10}></HStack>
                 <ProgressBox
-                  progress={item.balance}
+                  progress={
+                    item.balance === 'Error: not Opted in' ? 0 : item.balance
+                  }
                   goal={item.donations.goal}
-                  prefix={'$'}
+                  prefix={''}
                 />
                 <Button
                   my={2}
