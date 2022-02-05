@@ -13,7 +13,7 @@ import {
   FlatList,
   Spinner,
 } from 'native-base';
-import {TouchableOpacity, Dimensions} from 'react-native';
+import {TouchableOpacity, Dimensions, ImageBackground} from 'react-native';
 import colors from '../../../utils/colors';
 import Clipboard from '@react-native-clipboard/clipboard';
 import NameBox from '../../../globalComponents/infoBox/NameBox';
@@ -27,6 +27,7 @@ function AnonymousApproval({navigation}) {
   const dLogo = require('../../../../assets/images/approval/check.png');
   const copy = require('../../../../assets/images/connectWallet/copy.png');
   const logo = require('../../../../assets/images/logo/DechoLogomarkgradientlogomark.png');
+  const background = require('../../../../assets/images/bgImgs/blueWhite.jpg');
   const toast = useToast();
 
   const width = Dimensions.get('window').width;
@@ -42,7 +43,7 @@ function AnonymousApproval({navigation}) {
   let greetingString;
   if (nowHour < 12) {
     greetingString = 'morning';
-  } else if (nowHour > 12 && nowHour < 17) {
+  } else if (nowHour >= 12 && nowHour < 17) {
     greetingString = 'afternoon';
   } else {
     greetingString = 'evening';
@@ -127,7 +128,10 @@ function AnonymousApproval({navigation}) {
   }
 
   return (
-    <ScrollView bg={colors.white}>
+      <ImageBackground source={background} style={{
+        height: '100%'
+      }}>
+    <ScrollView >
       <VStack w={'100%'} h={'100%'} pt={10} space={3}>
         <TouchableOpacity
           alignSelf={'flex-end'}
@@ -234,6 +238,7 @@ function AnonymousApproval({navigation}) {
               onPress={() => {
                 setShowModal(false);
               }}
+              bgColor='#0cb4cc'
               colorScheme="teal">
               Proceed
             </Button>
@@ -241,6 +246,7 @@ function AnonymousApproval({navigation}) {
         </Modal.Content>
       </Modal>
     </ScrollView>
+      </ImageBackground>
   );
 }
 

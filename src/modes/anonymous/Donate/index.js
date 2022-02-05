@@ -1,6 +1,6 @@
 import React from 'react';
 import QRCode from 'react-native-qrcode-svg';
-
+import ImageBackground from 'react-native/Libraries/Image/ImageBackground';
 import {
   Button,
   HStack,
@@ -29,6 +29,7 @@ function AnonymousDonate({navigation}) {
   const settings = require('../../../../assets/images/settings.png');
   const copy = require('../../../../assets/images/connectWallet/copy.png');
   const logo = require('../../../../assets/images/logo/DechoLogomarkgradientlogomark.png');
+  const background = require('../../../../assets/images/bgImgs/blueWhite.jpg');
 
   const toast = useToast();
 
@@ -102,7 +103,10 @@ function AnonymousDonate({navigation}) {
   }
 
   return (
-    <ScrollView bg={colors.white}>
+    <ImageBackground source={background} style={{
+      height: '100%'
+    }}>
+    <ScrollView>
       <VStack w={'100%'} h={'100%'} pt={10} space={3}>
         <TouchableOpacity
           alignSelf={'flex-end'}
@@ -215,6 +219,7 @@ function AnonymousDonate({navigation}) {
         </Modal.Content>
       </Modal>
     </ScrollView>
+    </ImageBackground>
   );
 }
 

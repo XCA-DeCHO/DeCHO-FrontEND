@@ -8,7 +8,7 @@ function ProgressBox (props) {
 
 
     return(
-      <VStack bg={colors.lightBlue} px={5} borderRadius={'md'} mt={5} py={2}>
+      <VStack shadow={2} bg={colors.lightBlue} px={5} borderRadius={'md'} mt={5} py={2}>
         <Text
           m={1}
           color={colors.black}
