@@ -1,35 +1,17 @@
 import React from 'react';
-import {
-  Button,
-  HStack,
-  Image,
-  useToast,
-  Modal,
-  Pressable,
-  Progress,
-  ScrollView,
-  Text,
-  VStack,
-} from 'native-base';
-import {Platform, TouchableOpacity} from 'react-native';
+import {Button, ScrollView, Text, VStack} from 'native-base';
 import {
   useFonts,
   JosefinSans_700Bold,
   JosefinSans_400Regular,
 } from '@expo-google-fonts/josefin-sans';
 import colors from '../utils/colors';
-import AppLoading from 'expo-app-loading';
 import NameBox from '../globalComponents/infoBox/NameBox';
 import ProgressBox from '../globalComponents/ProgressBox/ProgressBox';
 
 function ViewInfo({route, navigation}) {
-  const {item, testImage} = route.params;
-  const toast = useToast();
-  const copy = require('../../assets/images/connectWallet/copy.png');
-
+  const {item} = route.params;
   let [fontsLoaded] = useFonts({JosefinSans_700Bold, JosefinSans_400Regular});
-  // const [showModal, setShowModal] = React.useState(false);
-  // let pFix = '';
 
   return (
     <ScrollView bg={colors.white}>
@@ -54,12 +36,12 @@ function ViewInfo({route, navigation}) {
         <NameBox
           name={item.title}
           slogan={item.short_description}
-          img={testImage}
+          img={item.photo_url}
         />
 
         <ProgressBox
           goal={item.cause_approval.goal}
-          progress={0}
+          progress={item.balance}
           prefix={'$'}
         />
         <Text fontSize={12} pb={10} pt={10}>
