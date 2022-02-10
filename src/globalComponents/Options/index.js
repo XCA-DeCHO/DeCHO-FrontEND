@@ -43,7 +43,8 @@ function Options({navigation}) {
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {
-              navigation.goBack();
+              Linking.openURL('https://decho.finance/contact-us').catch((error) => 
+              toast.show({description: error}))
             }}>
             <Text fontSize={20} fontFamily={'JosefinSans-Regular'}>
               Contact Us
