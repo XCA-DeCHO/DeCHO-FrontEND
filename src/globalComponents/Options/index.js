@@ -2,11 +2,6 @@ import React from 'react';
 import {Button, ScrollView, useToast, Text, VStack, Divider} from 'native-base';
 import {TouchableOpacity} from 'react-native';
 import {Linking} from 'react-native';
-import {
-  useFonts,
-  JosefinSans_700Bold,
-  JosefinSans_400Regular,
-} from '@expo-google-fonts/josefin-sans';
 import colors from '../../utils/colors';
 
 function Options({navigation}) {

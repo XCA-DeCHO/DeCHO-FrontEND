@@ -15,11 +15,6 @@ import {
   Spinner,
 } from 'native-base';
 import {Dimensions, TouchableOpacity} from 'react-native';
-import {
-  useFonts,
-  JosefinSans_700Bold,
-  JosefinSans_400Regular,
-} from '@expo-google-fonts/josefin-sans';
 import colors from '../../../utils/colors';
 import Clipboard from '@react-native-clipboard/clipboard';
 import NameBox from '../../../globalComponents/infoBox/NameBox';

@@ -1,17 +1,11 @@
 import React from 'react';
 import {Button, ScrollView, Text, VStack} from 'native-base';
-import {
-  useFonts,
-  JosefinSans_700Bold,
-  JosefinSans_400Regular,
-} from '@expo-google-fonts/josefin-sans';
 import colors from '../utils/colors';
 import NameBox from '../globalComponents/infoBox/NameBox';
 import ProgressBox from '../globalComponents/ProgressBox/ProgressBox';
 
 function ViewInfo({route, navigation}) {
   const {item} = route.params;
-  let [fontsLoaded] = useFonts({JosefinSans_700Bold, JosefinSans_400Regular});
 
   return (
     <ScrollView bg={colors.white}>
