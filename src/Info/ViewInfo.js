@@ -42,7 +42,7 @@ function ViewInfo({route, navigation}) {
         <ProgressBox
           goal={item.cause_approval.goal}
           progress={item.balance}
-          prefix={'$'}
+          prefix={''}
         />
         <Text fontSize={12} pb={10} pt={10}>
           {item.long_description}
