@@ -24,9 +24,8 @@ function NewWalletSuccess({navigation}) {
   const toast = useToast();
 
   const {RNAlgo} = NativeModules;
-
   if (!status) {
-    RNAlgo.createAccount(accountInfo => {
+    RNAlgo.createAccount((accountInfo) => {
       setStatus(true);
       setInfo(accountInfo);
     });
