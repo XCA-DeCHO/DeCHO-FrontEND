@@ -2,15 +2,9 @@ import React from 'react';
 import {Button, ScrollView, useToast, Text, VStack, Divider} from 'native-base';
 import {TouchableOpacity} from 'react-native';
 import {Linking} from 'react-native';
-import {
-  useFonts,
-  JosefinSans_700Bold,
-  JosefinSans_400Regular,
-} from '@expo-google-fonts/josefin-sans';
 import colors from '../../utils/colors';
 
 function Options({navigation}) {
-  let [fontsLoaded] = useFonts({JosefinSans_700Bold, JosefinSans_400Regular});
   const toast = useToast();
 
   return (
@@ -43,7 +37,7 @@ function Options({navigation}) {
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {
-              Linking.openURL('https://decho.finance/contact-us').catch((error) => 
+              Linking.openURL('https://decho.finance/contact-us').catch((error) =>
               toast.show({description: error}))
             }}>
             <Text fontSize={20} fontFamily={'JosefinSans-Regular'}>

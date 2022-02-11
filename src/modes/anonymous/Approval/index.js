@@ -26,7 +26,7 @@ import ProgressBox from '../../../globalComponents/ProgressBox/ProgressBox';
 import QRCode from 'react-native-qrcode-svg';
 
 function AnonymousApproval({navigation}) {
-  const settings = require('../../../../assets/images/settings.png');
+  const settings = require('../../../../assets/images/options.png');
   const close = require('../../../../assets/images/approval/close.png');
   const info = require('../../../../assets/images/approval/info.png');
   const dLogo = require('../../../../assets/images/approval/check.png');
@@ -138,19 +138,26 @@ function AnonymousApproval({navigation}) {
       style={{
         height: '100%',
       }}>
-      <ScrollView>
-        <VStack w={'100%'} h={'100%'} pt={10} space={3}>
-          <TouchableOpacity
+    <ScrollView >
+      <VStack w={'100%'} h={'100%'} pt={10} space={3}>
+        <TouchableOpacity
+          style={{
+            backgroundColor:colors.white,
+            borderRadius:150,
+            padding: 10,
+            width:50,
+            alignSelf:'flex-end',
+            margin:10,
+            elevation:5
+          }}
+          onPress={() => {
+            navigation.navigate('Options');
+          }}>
+          <Image
+            source={settings}
+            alt={'settings'}
+            size={7}
             alignSelf={'flex-end'}
-            onPress={() => {
-              navigation.navigate('Options');
-            }}>
-            <Image
-              mx={5}
-              source={settings}
-              alt={'settings'}
-              size={7}
-              alignSelf={'flex-end'}
             />
           </TouchableOpacity>
           <Text

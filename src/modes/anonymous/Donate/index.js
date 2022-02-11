@@ -15,18 +15,13 @@ import {
   Spinner,
 } from 'native-base';
 import {Dimensions, Linking, TouchableOpacity} from 'react-native';
-import {
-  useFonts,
-  JosefinSans_700Bold,
-  JosefinSans_400Regular,
-} from '@expo-google-fonts/josefin-sans';
 import colors from '../../../utils/colors';
 import Clipboard from '@react-native-clipboard/clipboard';
 import NameBox from '../../../globalComponents/infoBox/NameBox';
 import ProgressBox from '../../../globalComponents/ProgressBox/ProgressBox';
 
 function AnonymousDonate({navigation}) {
-  const settings = require('../../../../assets/images/settings.png');
+  const settings = require('../../../../assets/images/options.png');
   const copy = require('../../../../assets/images/connectWallet/copy.png');
   const logo = require('../../../../assets/images/logo/DechoLogomarkgradientlogomark.png');
   const background = require('../../../../assets/images/bgImgs/blueWhite.jpg');
@@ -35,7 +30,6 @@ function AnonymousDonate({navigation}) {
 
   const width = Dimensions.get('window').width;
 
-  let [fontsLoaded] = useFonts({JosefinSans_700Bold, JosefinSans_400Regular});
 
   const [showModal, setShowModal] = React.useState(false);
   const [address, setAddress] = React.useState('');
@@ -105,15 +99,21 @@ function AnonymousDonate({navigation}) {
   }
 
   return (
-    <ImageBackground
-      source={background}
-      style={{
-        height: '100%',
-      }}>
-      <ScrollView>
-        <VStack w={'100%'} h={'100%'} pt={10} space={3}>
-          <TouchableOpacity
-            alignSelf={'flex-end'}
+    <ImageBackground source={background} style={{
+      height: '100%'
+    }}>
+    <ScrollView>
+      <VStack w={'100%'} h={'100%'} pt={10} space={3}>
+        <TouchableOpacity
+          style={{
+            backgroundColor:colors.white,
+            borderRadius:150,
+            padding: 10,
+            width:50,
+            alignSelf:'flex-end',
+            margin:10,
+            elevation:5
+          }}
             onPress={() => {
               navigation.navigate('Options');
             }}>
