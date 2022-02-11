@@ -13,7 +13,12 @@ import {
   FlatList,
   Spinner,
 } from 'native-base';
-import {TouchableOpacity, Dimensions, ImageBackground} from 'react-native';
+import {
+  TouchableOpacity,
+  Dimensions,
+  ImageBackground,
+  Linking,
+} from 'react-native';
 import colors from '../../../utils/colors';
 import Clipboard from '@react-native-clipboard/clipboard';
 import NameBox from '../../../globalComponents/infoBox/NameBox';
@@ -128,8 +133,10 @@ function AnonymousApproval({navigation}) {
   }
 
   return (
-      <ImageBackground source={background} style={{
-        height: '100%'
+    <ImageBackground
+      source={background}
+      style={{
+        height: '100%',
       }}>
     <ScrollView >
       <VStack w={'100%'} h={'100%'} pt={10} space={3}>
@@ -151,109 +158,110 @@ function AnonymousApproval({navigation}) {
             alt={'settings'}
             size={7}
             alignSelf={'flex-end'}
-          />
-        </TouchableOpacity>
-        <Text
-          mx={5}
-          color={colors.black}
-          fontSize={'24'}
-          fontWeight={'500'}
-          fontFamily={'JosefinSans-Bold'}>
-          Hi, Good {greetingString}.
-        </Text>
-        {/*  Commented out the search */}
-        {/*<Input mx={5} placeholder={'Search....'} />*/}
-        <Text fontSize={10} px={5}>
-          Swipe left to see more{'>>'}
-        </Text>
-        {checkLoading()}
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate('AnonymousDonate');
-          }}>
+            />
+          </TouchableOpacity>
           <Text
-            mx={10}
-            my={5}
+            mx={5}
             color={colors.black}
-            fontSize={'12'}
-            fontFamily={'JosefinSans-Regular'}
-            alignSelf={'flex-end'}>
-            View approved projects{'>>'}
+            fontSize={'24'}
+            fontWeight={'500'}
+            fontFamily={'JosefinSans-Bold'}>
+            Hi, Good {greetingString}.
           </Text>
-        </TouchableOpacity>
-      </VStack>
-      <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-        <Modal.Content w={'95%'}>
-          <Modal.CloseButton />
-          <Modal.Header>Vote</Modal.Header>
-          <Modal.Body>
+          {/*  Commented out the search */}
+          {/*<Input mx={5} placeholder={'Search....'} />*/}
+          <Text fontSize={10} px={5}>
+            Swipe left to see more{'>>'}
+          </Text>
+          {checkLoading()}
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('AnonymousDonate');
+            }}>
             <Text
-              my={2}
+              mx={10}
+              my={5}
               color={colors.black}
-              fontSize={'16'}
-              fontFamily={'JosefinSans-Regular'}>
-              Make your vote towards this project by sending CHOICE to this
-              address.
-              {'\n'}Your Choice will be refunded and rewarded!
+              fontSize={'12'}
+              fontFamily={'JosefinSans-Regular'}
+              alignSelf={'flex-end'}>
+              View approved projects{'>>'}
             </Text>
-            <HStack
-              alignSelf={'center'}
-              p={1}
-              m={2}
-              borderWidth={3}
-              borderColor={colors.grey}
-              borderRadius={'sm'}>
-              <QRCode
-                value={address}
-                size={250}
-                logo={logo}
-                logoBackgroundColor={colors.white}
-                logoBorderRadius={800}
-                color={colors.grey}
-              />
-            </HStack>
-            <Pressable
-              onPress={() => {
-                Clipboard.setString(address);
-                toast.show({
-                  description: 'Copied Address',
-                });
-              }}
-              flexDirection={'row'}
-              background={colors.grey}
-              px={1}
-              py={5}
-              borderRadius={'md'}
-              justifyContent={'space-around'}>
+          </TouchableOpacity>
+        </VStack>
+        <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
+          <Modal.Content w={'95%'}>
+            <Modal.CloseButton />
+            <Modal.Header>Vote</Modal.Header>
+            <Modal.Body>
               <Text
+                my={2}
                 color={colors.black}
-                fontSize={'8'}
+                fontSize={'16'}
                 fontFamily={'JosefinSans-Regular'}>
-                {address}
+                Make your vote towards this project by sending CHOICE to this
+                address.
+                {'\n'}Your Choice will be refunded and rewarded!
               </Text>
-              <Image
-                source={copy}
-                alt="applause"
-                h="3"
-                w="3"
+              <HStack
                 alignSelf={'center'}
-              />
-            </Pressable>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button
-              onPress={() => {
-                setShowModal(false);
-              }}
-              bgColor='#0cb4cc'
-              colorScheme="teal">
-              Proceed
-            </Button>
-          </Modal.Footer>
-        </Modal.Content>
-      </Modal>
-    </ScrollView>
-      </ImageBackground>
+                p={1}
+                m={2}
+                borderWidth={3}
+                borderColor={colors.grey}
+                borderRadius={'sm'}>
+                <QRCode
+                  value={address}
+                  size={250}
+                  logo={logo}
+                  logoBackgroundColor={colors.white}
+                  logoBorderRadius={800}
+                  color={colors.grey}
+                />
+              </HStack>
+              <Pressable
+                onPress={() => {
+                  Clipboard.setString(address);
+                  toast.show({
+                    description: 'Copied Address',
+                  });
+                }}
+                flexDirection={'row'}
+                background={colors.grey}
+                px={1}
+                py={5}
+                borderRadius={'md'}
+                justifyContent={'space-around'}>
+                <Text
+                  color={colors.black}
+                  fontSize={'8'}
+                  fontFamily={'JosefinSans-Regular'}>
+                  {address}
+                </Text>
+                <Image
+                  source={copy}
+                  alt="applause"
+                  h="3"
+                  w="3"
+                  alignSelf={'center'}
+                />
+              </Pressable>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button
+                onPress={() => {
+                  Linking.openURL('algorand://main');
+                  setShowModal(false);
+                }}
+                bgColor="#0cb4cc"
+                colorScheme="teal">
+                Proceed
+              </Button>
+            </Modal.Footer>
+          </Modal.Content>
+        </Modal>
+      </ScrollView>
+    </ImageBackground>
   );
 }
 
