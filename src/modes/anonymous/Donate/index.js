@@ -21,7 +21,7 @@ import NameBox from '../../../globalComponents/infoBox/NameBox';
 import ProgressBox from '../../../globalComponents/ProgressBox/ProgressBox';
 
 function AnonymousDonate({navigation}) {
-  const settings = require('../../../../assets/images/settings.png');
+  const settings = require('../../../../assets/images/options.png');
   const copy = require('../../../../assets/images/connectWallet/copy.png');
   const logo = require('../../../../assets/images/logo/DechoLogomarkgradientlogomark.png');
   const background = require('../../../../assets/images/bgImgs/blueWhite.jpg');
@@ -30,7 +30,6 @@ function AnonymousDonate({navigation}) {
 
   const width = Dimensions.get('window').width;
 
-  let [fontsLoaded] = useFonts({JosefinSans_700Bold, JosefinSans_400Regular});
 
   const [showModal, setShowModal] = React.useState(false);
   const [address, setAddress] = React.useState('');
@@ -104,12 +103,19 @@ function AnonymousDonate({navigation}) {
     <ScrollView>
       <VStack w={'100%'} h={'100%'} pt={10} space={3}>
         <TouchableOpacity
-          alignSelf={'flex-end'}
+          style={{
+            backgroundColor:colors.white,
+            borderRadius:150,
+            padding: 10,
+            width:50,
+            alignSelf:'flex-end',
+            margin:10,
+            elevation:5
+          }}
           onPress={() => {
             navigation.navigate('Options');
           }}>
           <Image
-            mx={5}
             source={settings}
             alt={'settings'}
             size={7}

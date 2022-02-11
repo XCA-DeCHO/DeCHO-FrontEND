@@ -5,7 +5,6 @@ import {Linking} from 'react-native';
 import colors from '../../utils/colors';
 
 function Options({navigation}) {
-  let [fontsLoaded] = useFonts({JosefinSans_700Bold, JosefinSans_400Regular});
   const toast = useToast();
 
   return (
@@ -38,7 +37,7 @@ function Options({navigation}) {
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {
-              Linking.openURL('https://decho.finance/contact-us').catch((error) => 
+              Linking.openURL('https://decho.finance/contact-us').catch((error) =>
               toast.show({description: error}))
             }}>
             <Text fontSize={20} fontFamily={'JosefinSans-Regular'}>
