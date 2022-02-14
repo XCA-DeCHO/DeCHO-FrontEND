@@ -118,7 +118,6 @@ function AnonymousDonate({navigation}) {
               navigation.navigate('Options');
             }}>
             <Image
-              mx={5}
               source={settings}
               alt={'settings'}
               size={7}
