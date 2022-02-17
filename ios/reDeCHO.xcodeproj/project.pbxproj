@@ -8,32 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* reDeCHOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* reDeCHOTests.m */; };
-		01A0F7B6A7944A9799B5A3C4 /* JosefinSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7BF74AEE44F4126B59D3CD4 /* JosefinSans-Italic.ttf */; };
+		0B13F73A2AA14D398A718411 /* JosefinSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51DC03964AE34B51B9749635 /* JosefinSans-ExtraLight.ttf */; };
+		0C58EE05634648DFA941C998 /* JosefinSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8682FC7D5D44CFB814B4EA1 /* JosefinSans-BoldItalic.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2A5E39D2A9934D1DB7D70CFF /* JosefinSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32FBBDB0BABB4DDAB82EA8A4 /* JosefinSans-Thin.ttf */; };
-		2C4E9B6C2790B34100D25D2F /* swift-algorand-sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 2C4E9B6B2790B34100D25D2F /* swift-algorand-sdk */; };
-		328834FB27982946007E3EE0 /* RNAlgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328834FA27982946007E3EE0 /* RNAlgo.swift */; };
-		328834FD27982955007E3EE0 /* RNAlgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 328834FC27982955007E3EE0 /* RNAlgo.m */; };
-		3C4283A5E7774499999F8854 /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08E25689B97C4F09B066729F /* JosefinSans-Regular.ttf */; };
-		3E5A05F3F1F94B03BA0427FC /* JosefinSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF67E1ADA8A34372842864C2 /* JosefinSans-LightItalic.ttf */; };
-		4281AB69FACD461DAC95A7EE /* JosefinSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 290FB335741441E89AD70EB2 /* JosefinSans-ExtraLight.ttf */; };
-		5DEE5528872D45098BD770A8 /* JosefinSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA75C3DECEF44664A008AA32 /* JosefinSans-BoldItalic.ttf */; };
-		725CA3C174C644C7BCAD9AC6 /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9367FDE8E6346068D17D15F /* JosefinSans-Light.ttf */; };
+		19A657CB7A144D34BFC16FD8 /* JosefinSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDF7518DE5954A84B864DC56 /* JosefinSans-Thin.ttf */; };
+		1B37800D504A41BE9B637B0E /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E960ECBCD6046E18CA4D53D /* JosefinSans-Bold.ttf */; };
+		28E169423A6C45DC952EAAC2 /* JosefinSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A70D15FB1364FD5AE203320 /* JosefinSans-Italic.ttf */; };
+		3B904863A6A64BC3A6404B77 /* JosefinSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36487341A04C41C0B26AFC28 /* JosefinSans-Medium.ttf */; };
+		5999DA87A99C41D2A2E8ED0B /* GILLSANS.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 495D424C3584431A8E95E8C4 /* GILLSANS.ttf */; };
+		6281993DCA0E4B248B27AC0B /* JosefinSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCAB632406A64E7CB1FCB884 /* JosefinSans-LightItalic.ttf */; };
+		7B204352815D45D2BB1D54AB /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE3D907BDC884476A22BFAB4 /* JosefinSans-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8A237FBBE0B244C4AF58A387 /* JosefinSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09C9C3EEEEBF4768B17781B2 /* JosefinSans-SemiBoldItalic.ttf */; };
-		97E664A9384642939F640673 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 820C8993D327470CABDF1FDA /* JosefinSans-SemiBold.ttf */; };
-		992B03C377C5F2751357FBEB /* libPods-reDeCHO-reDeCHOTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81630E5CAAE512E4EF153E61 /* libPods-reDeCHO-reDeCHOTests.a */; };
-		A8AC1CA4B93E4F72B8128DA7 /* GILLSANS.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9EDCCF29A4C845FE9E164028 /* GILLSANS.ttf */; };
-		B247D56D4FE44929A6C7022B /* JosefinSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C07ECBADE784710B99B19B1 /* JosefinSans-ExtraLightItalic.ttf */; };
-		D3BB6341E16573EAEBDF14A4 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72B8ED3F3D8217CDA85E9EF /* ExpoModulesProvider.swift */; };
-		D8EF8997597A484C889C7993 /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1085C5E5FD984076A4BED006 /* JosefinSans-Bold.ttf */; };
-		E69B453A5B1B4E8692D8DE4C /* JosefinSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BBEC1F259ED4D0980D01015 /* JosefinSans-ThinItalic.ttf */; };
-		ECD839E125154B1FAC4AE48C /* JosefinSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F1F6071E49C44EA86133CCF /* JosefinSans-Medium.ttf */; };
-		EF5487F20B2705844AB56903 /* libPods-reDeCHO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B59528C9478C97174BBAFF83 /* libPods-reDeCHO.a */; };
-		F8E2DA3DFCAC4F9B8D19ABB8 /* JosefinSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 865183AC59804079A6DC8170 /* JosefinSans-MediumItalic.ttf */; };
-		FCE91192EADB056C597ABC52 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C478E22894C904867865DF /* ExpoModulesProvider.swift */; };
+		88FB5D8D26BF4CEE9F8F1800 /* JosefinSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D069920C59842B2B4400945 /* JosefinSans-ExtraLightItalic.ttf */; };
+		A07EF4A17D6B4EA29608940C /* JosefinSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D276639B69CD4101926B6C6D /* JosefinSans-ThinItalic.ttf */; };
+		C24F7E2E086F46D8BA22C7A1 /* JosefinSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40378B05BBC4A219F6C0BEF /* JosefinSans-SemiBoldItalic.ttf */; };
+		C29BB01AEA2886B4DD10E5BC /* libPods-reDeCHO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8B7F0137E5465756080895 /* libPods-reDeCHO.a */; };
+		C7D43E48CF22133554BD3343 /* libPods-reDeCHO-reDeCHOTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0DB63128F53FE38EF01D21 /* libPods-reDeCHO-reDeCHOTests.a */; };
+		C8133B02CDF5484FBDA521C3 /* JosefinSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7154C1CDE7D34C1A85AD54C1 /* JosefinSans-MediumItalic.ttf */; };
+		D30CD0F2610143FCBFA5118E /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB84029CE0FE4AEE9FE6C52E /* JosefinSans-Light.ttf */; };
+		F6EA25726E724310A1F22654 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AB2A4012687413597732EE5 /* JosefinSans-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,40 +45,35 @@
 		00E356EE1AD99517003FC87E /* reDeCHOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reDeCHOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* reDeCHOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = reDeCHOTests.m; sourceTree = "<group>"; };
-		04CD99D9D543174B93F05079 /* Pods-reDeCHO-reDeCHOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO-reDeCHOTests.debug.xcconfig"; path = "Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests.debug.xcconfig"; sourceTree = "<group>"; };
-		067177D25CAA67E325489115 /* Pods-reDeCHO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO.debug.xcconfig"; path = "Target Support Files/Pods-reDeCHO/Pods-reDeCHO.debug.xcconfig"; sourceTree = "<group>"; };
-		08E25689B97C4F09B066729F /* JosefinSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Regular.ttf"; path = "../assets/fonts/JosefinSans-Regular.ttf"; sourceTree = "<group>"; };
-		09C9C3EEEEBF4768B17781B2 /* JosefinSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-SemiBoldItalic.ttf"; path = "../assets/fonts/JosefinSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		0BBEC1F259ED4D0980D01015 /* JosefinSans-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-ThinItalic.ttf"; path = "../assets/fonts/JosefinSans-ThinItalic.ttf"; sourceTree = "<group>"; };
-		1085C5E5FD984076A4BED006 /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Bold.ttf"; path = "../assets/fonts/JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
+		066A81306FCBADE98CBC5AFC /* Pods-reDeCHO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO.release.xcconfig"; path = "Target Support Files/Pods-reDeCHO/Pods-reDeCHO.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* reDeCHO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reDeCHO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = reDeCHO/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = reDeCHO/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = reDeCHO/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = reDeCHO/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = reDeCHO/main.m; sourceTree = "<group>"; };
-		290FB335741441E89AD70EB2 /* JosefinSans-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-ExtraLight.ttf"; path = "../assets/fonts/JosefinSans-ExtraLight.ttf"; sourceTree = "<group>"; };
-		328834FA27982946007E3EE0 /* RNAlgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNAlgo.swift; sourceTree = "<group>"; };
-		328834FC27982955007E3EE0 /* RNAlgo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNAlgo.m; sourceTree = "<group>"; };
-		328834FE2798296E007E3EE0 /* reDeCHO-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "reDeCHO-Bridging-Header.h"; sourceTree = "<group>"; };
-		32FBBDB0BABB4DDAB82EA8A4 /* JosefinSans-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Thin.ttf"; path = "../assets/fonts/JosefinSans-Thin.ttf"; sourceTree = "<group>"; };
-		4F26F1765998B1357CDE9ED7 /* Pods-reDeCHO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO.release.xcconfig"; path = "Target Support Files/Pods-reDeCHO/Pods-reDeCHO.release.xcconfig"; sourceTree = "<group>"; };
-		58C478E22894C904867865DF /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-reDeCHO-reDeCHOTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		7C07ECBADE784710B99B19B1 /* JosefinSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-ExtraLightItalic.ttf"; path = "../assets/fonts/JosefinSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
-		81630E5CAAE512E4EF153E61 /* libPods-reDeCHO-reDeCHOTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reDeCHO-reDeCHOTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		182E27F03C0771E4A486326F /* Pods-reDeCHO-reDeCHOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO-reDeCHOTests.release.xcconfig"; path = "Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests.release.xcconfig"; sourceTree = "<group>"; };
+		36487341A04C41C0B26AFC28 /* JosefinSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Medium.ttf"; path = "../assets/fonts/JosefinSans-Medium.ttf"; sourceTree = "<group>"; };
+		495D424C3584431A8E95E8C4 /* GILLSANS.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = GILLSANS.ttf; path = ../assets/fonts/GILLSANS.ttf; sourceTree = "<group>"; };
+		4B0DB63128F53FE38EF01D21 /* libPods-reDeCHO-reDeCHOTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reDeCHO-reDeCHOTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D069920C59842B2B4400945 /* JosefinSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-ExtraLightItalic.ttf"; path = "../assets/fonts/JosefinSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		51DC03964AE34B51B9749635 /* JosefinSans-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-ExtraLight.ttf"; path = "../assets/fonts/JosefinSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		5A70D15FB1364FD5AE203320 /* JosefinSans-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Italic.ttf"; path = "../assets/fonts/JosefinSans-Italic.ttf"; sourceTree = "<group>"; };
+		6AB2A4012687413597732EE5 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-SemiBold.ttf"; path = "../assets/fonts/JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		7154C1CDE7D34C1A85AD54C1 /* JosefinSans-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-MediumItalic.ttf"; path = "../assets/fonts/JosefinSans-MediumItalic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = reDeCHO/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		820C8993D327470CABDF1FDA /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-SemiBold.ttf"; path = "../assets/fonts/JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
-		865183AC59804079A6DC8170 /* JosefinSans-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-MediumItalic.ttf"; path = "../assets/fonts/JosefinSans-MediumItalic.ttf"; sourceTree = "<group>"; };
-		8F1F6071E49C44EA86133CCF /* JosefinSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Medium.ttf"; path = "../assets/fonts/JosefinSans-Medium.ttf"; sourceTree = "<group>"; };
-		9EDCCF29A4C845FE9E164028 /* GILLSANS.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = GILLSANS.ttf; path = ../assets/fonts/GILLSANS.ttf; sourceTree = "<group>"; };
-		A9367FDE8E6346068D17D15F /* JosefinSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Light.ttf"; path = "../assets/fonts/JosefinSans-Light.ttf"; sourceTree = "<group>"; };
-		B59528C9478C97174BBAFF83 /* libPods-reDeCHO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reDeCHO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA75C3DECEF44664A008AA32 /* JosefinSans-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-BoldItalic.ttf"; path = "../assets/fonts/JosefinSans-BoldItalic.ttf"; sourceTree = "<group>"; };
-		C7BF74AEE44F4126B59D3CD4 /* JosefinSans-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Italic.ttf"; path = "../assets/fonts/JosefinSans-Italic.ttf"; sourceTree = "<group>"; };
-		E72B8ED3F3D8217CDA85E9EF /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-reDeCHO/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		8E960ECBCD6046E18CA4D53D /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Bold.ttf"; path = "../assets/fonts/JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
+		8FE5A19FC69E768077508E0A /* Pods-reDeCHO-reDeCHOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO-reDeCHOTests.debug.xcconfig"; path = "Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9F5A37C5C6EB0192652AF7DD /* Pods-reDeCHO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO.debug.xcconfig"; path = "Target Support Files/Pods-reDeCHO/Pods-reDeCHO.debug.xcconfig"; sourceTree = "<group>"; };
+		AE3D907BDC884476A22BFAB4 /* JosefinSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Regular.ttf"; path = "../assets/fonts/JosefinSans-Regular.ttf"; sourceTree = "<group>"; };
+		AF8B7F0137E5465756080895 /* libPods-reDeCHO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reDeCHO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B40378B05BBC4A219F6C0BEF /* JosefinSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-SemiBoldItalic.ttf"; path = "../assets/fonts/JosefinSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		B8682FC7D5D44CFB814B4EA1 /* JosefinSans-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-BoldItalic.ttf"; path = "../assets/fonts/JosefinSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CB84029CE0FE4AEE9FE6C52E /* JosefinSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Light.ttf"; path = "../assets/fonts/JosefinSans-Light.ttf"; sourceTree = "<group>"; };
+		CDF7518DE5954A84B864DC56 /* JosefinSans-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Thin.ttf"; path = "../assets/fonts/JosefinSans-Thin.ttf"; sourceTree = "<group>"; };
+		D276639B69CD4101926B6C6D /* JosefinSans-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-ThinItalic.ttf"; path = "../assets/fonts/JosefinSans-ThinItalic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		EE2B730418652FF8F1058DDF /* Pods-reDeCHO-reDeCHOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reDeCHO-reDeCHOTests.release.xcconfig"; path = "Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests.release.xcconfig"; sourceTree = "<group>"; };
-		EF67E1ADA8A34372842864C2 /* JosefinSans-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-LightItalic.ttf"; path = "../assets/fonts/JosefinSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		FCAB632406A64E7CB1FCB884 /* JosefinSans-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-LightItalic.ttf"; path = "../assets/fonts/JosefinSans-LightItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				992B03C377C5F2751357FBEB /* libPods-reDeCHO-reDeCHOTests.a in Frameworks */,
+				C7D43E48CF22133554BD3343 /* libPods-reDeCHO-reDeCHOTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C4E9B6C2790B34100D25D2F /* swift-algorand-sdk in Frameworks */,
-				EF5487F20B2705844AB56903 /* libPods-reDeCHO.a in Frameworks */,
+				C29BB01AEA2886B4DD10E5BC /* libPods-reDeCHO.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,14 +113,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0D777FA7766381986F703599 /* reDeCHOTests */ = {
-			isa = PBXGroup;
-			children = (
-				58C478E22894C904867865DF /* ExpoModulesProvider.swift */,
-			);
-			name = reDeCHOTests;
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* reDeCHO */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,43 +130,21 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				B59528C9478C97174BBAFF83 /* libPods-reDeCHO.a */,
-				81630E5CAAE512E4EF153E61 /* libPods-reDeCHO-reDeCHOTests.a */,
+				AF8B7F0137E5465756080895 /* libPods-reDeCHO.a */,
+				4B0DB63128F53FE38EF01D21 /* libPods-reDeCHO-reDeCHOTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		56153300496E45AF9D91398A /* Resources */ = {
+		640E44372FD2516F010898F0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9EDCCF29A4C845FE9E164028 /* GILLSANS.ttf */,
-				1085C5E5FD984076A4BED006 /* JosefinSans-Bold.ttf */,
-				BA75C3DECEF44664A008AA32 /* JosefinSans-BoldItalic.ttf */,
-				290FB335741441E89AD70EB2 /* JosefinSans-ExtraLight.ttf */,
-				7C07ECBADE784710B99B19B1 /* JosefinSans-ExtraLightItalic.ttf */,
-				C7BF74AEE44F4126B59D3CD4 /* JosefinSans-Italic.ttf */,
-				A9367FDE8E6346068D17D15F /* JosefinSans-Light.ttf */,
-				EF67E1ADA8A34372842864C2 /* JosefinSans-LightItalic.ttf */,
-				8F1F6071E49C44EA86133CCF /* JosefinSans-Medium.ttf */,
-				865183AC59804079A6DC8170 /* JosefinSans-MediumItalic.ttf */,
-				08E25689B97C4F09B066729F /* JosefinSans-Regular.ttf */,
-				820C8993D327470CABDF1FDA /* JosefinSans-SemiBold.ttf */,
-				09C9C3EEEEBF4768B17781B2 /* JosefinSans-SemiBoldItalic.ttf */,
-				32FBBDB0BABB4DDAB82EA8A4 /* JosefinSans-Thin.ttf */,
-				0BBEC1F259ED4D0980D01015 /* JosefinSans-ThinItalic.ttf */,
+				9F5A37C5C6EB0192652AF7DD /* Pods-reDeCHO.debug.xcconfig */,
+				066A81306FCBADE98CBC5AFC /* Pods-reDeCHO.release.xcconfig */,
+				8FE5A19FC69E768077508E0A /* Pods-reDeCHO-reDeCHOTests.debug.xcconfig */,
+				182E27F03C0771E4A486326F /* Pods-reDeCHO-reDeCHOTests.release.xcconfig */,
 			);
-			name = Resources;
-			path = "";
-			sourceTree = "<group>";
-		};
-		61B4729DA83816062B75A643 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				067177D25CAA67E325489115 /* Pods-reDeCHO.debug.xcconfig */,
-				4F26F1765998B1357CDE9ED7 /* Pods-reDeCHO.release.xcconfig */,
-				04CD99D9D543174B93F05079 /* Pods-reDeCHO-reDeCHOTests.debug.xcconfig */,
-				EE2B730418652FF8F1058DDF /* Pods-reDeCHO-reDeCHOTests.release.xcconfig */,
-			);
+			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -199,17 +158,13 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				328834FE2798296E007E3EE0 /* reDeCHO-Bridging-Header.h */,
-				328834FC27982955007E3EE0 /* RNAlgo.m */,
-				328834FA27982946007E3EE0 /* RNAlgo.swift */,
 				13B07FAE1A68108700A75B9A /* reDeCHO */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* reDeCHOTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				61B4729DA83816062B75A643 /* Pods */,
-				CF8E298367FF99C9B9A4CB66 /* ExpoModulesProviders */,
-				56153300496E45AF9D91398A /* Resources */,
+				640E44372FD2516F010898F0 /* Pods */,
+				964DC12582FB448EB0515149 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -225,21 +180,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		903BD1B917A2CA5406772693 /* reDeCHO */ = {
+		964DC12582FB448EB0515149 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E72B8ED3F3D8217CDA85E9EF /* ExpoModulesProvider.swift */,
+				495D424C3584431A8E95E8C4 /* GILLSANS.ttf */,
+				8E960ECBCD6046E18CA4D53D /* JosefinSans-Bold.ttf */,
+				B8682FC7D5D44CFB814B4EA1 /* JosefinSans-BoldItalic.ttf */,
+				51DC03964AE34B51B9749635 /* JosefinSans-ExtraLight.ttf */,
+				4D069920C59842B2B4400945 /* JosefinSans-ExtraLightItalic.ttf */,
+				5A70D15FB1364FD5AE203320 /* JosefinSans-Italic.ttf */,
+				CB84029CE0FE4AEE9FE6C52E /* JosefinSans-Light.ttf */,
+				FCAB632406A64E7CB1FCB884 /* JosefinSans-LightItalic.ttf */,
+				36487341A04C41C0B26AFC28 /* JosefinSans-Medium.ttf */,
+				7154C1CDE7D34C1A85AD54C1 /* JosefinSans-MediumItalic.ttf */,
+				AE3D907BDC884476A22BFAB4 /* JosefinSans-Regular.ttf */,
+				6AB2A4012687413597732EE5 /* JosefinSans-SemiBold.ttf */,
+				B40378B05BBC4A219F6C0BEF /* JosefinSans-SemiBoldItalic.ttf */,
+				CDF7518DE5954A84B864DC56 /* JosefinSans-Thin.ttf */,
+				D276639B69CD4101926B6C6D /* JosefinSans-ThinItalic.ttf */,
 			);
-			name = reDeCHO;
-			sourceTree = "<group>";
-		};
-		CF8E298367FF99C9B9A4CB66 /* ExpoModulesProviders */ = {
-			isa = PBXGroup;
-			children = (
-				903BD1B917A2CA5406772693 /* reDeCHO */,
-				0D777FA7766381986F703599 /* reDeCHOTests */,
-			);
-			name = ExpoModulesProviders;
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,12 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "reDeCHOTests" */;
 			buildPhases = (
-				C6E5132BD7FA095D88ACE182 /* [CP] Check Pods Manifest.lock */,
+				3EBB8261F7C6CB15D76705F5 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				FDD34BC45356D8C34A1416C0 /* [CP] Embed Pods Frameworks */,
-				4A8BEA6240038E6857576377 /* [CP] Copy Pods Resources */,
+				B459D79500BA744892083E58 /* [CP] Embed Pods Frameworks */,
+				E97E068942B1FE09AC271995 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,23 +231,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "reDeCHO" */;
 			buildPhases = (
-				71A0A1B5C85B93C0689682B8 /* [CP] Check Pods Manifest.lock */,
+				CBD63216CC72E8438F01F0AD /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				E4D509E19D1451A8A10C8D34 /* [CP] Embed Pods Frameworks */,
-				37382C802C74363A7FDC008A /* [CP] Copy Pods Resources */,
+				33144416BBEB6EA33BAAAC1B /* [CP] Embed Pods Frameworks */,
+				2FFD14FF952815EAB33839C8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = reDeCHO;
-			packageProductDependencies = (
-				2C4E9B6B2790B34100D25D2F /* swift-algorand-sdk */,
-			);
 			productName = reDeCHO;
 			productReference = 13B07F961A680F5B00A75B9A /* reDeCHO.app */;
 			productType = "com.apple.product-type.application";
@@ -317,9 +275,6 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
-			packageReferences = (
-				2C4E9B6A2790B34000D25D2F /* XCRemoteSwiftPackageReference "Swift-Algorand-Sdk.git" */,
-			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -344,21 +299,21 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				A8AC1CA4B93E4F72B8128DA7 /* GILLSANS.ttf in Resources */,
-				D8EF8997597A484C889C7993 /* JosefinSans-Bold.ttf in Resources */,
-				5DEE5528872D45098BD770A8 /* JosefinSans-BoldItalic.ttf in Resources */,
-				4281AB69FACD461DAC95A7EE /* JosefinSans-ExtraLight.ttf in Resources */,
-				B247D56D4FE44929A6C7022B /* JosefinSans-ExtraLightItalic.ttf in Resources */,
-				01A0F7B6A7944A9799B5A3C4 /* JosefinSans-Italic.ttf in Resources */,
-				725CA3C174C644C7BCAD9AC6 /* JosefinSans-Light.ttf in Resources */,
-				3E5A05F3F1F94B03BA0427FC /* JosefinSans-LightItalic.ttf in Resources */,
-				ECD839E125154B1FAC4AE48C /* JosefinSans-Medium.ttf in Resources */,
-				F8E2DA3DFCAC4F9B8D19ABB8 /* JosefinSans-MediumItalic.ttf in Resources */,
-				3C4283A5E7774499999F8854 /* JosefinSans-Regular.ttf in Resources */,
-				97E664A9384642939F640673 /* JosefinSans-SemiBold.ttf in Resources */,
-				8A237FBBE0B244C4AF58A387 /* JosefinSans-SemiBoldItalic.ttf in Resources */,
-				2A5E39D2A9934D1DB7D70CFF /* JosefinSans-Thin.ttf in Resources */,
-				E69B453A5B1B4E8692D8DE4C /* JosefinSans-ThinItalic.ttf in Resources */,
+				5999DA87A99C41D2A2E8ED0B /* GILLSANS.ttf in Resources */,
+				1B37800D504A41BE9B637B0E /* JosefinSans-Bold.ttf in Resources */,
+				0C58EE05634648DFA941C998 /* JosefinSans-BoldItalic.ttf in Resources */,
+				0B13F73A2AA14D398A718411 /* JosefinSans-ExtraLight.ttf in Resources */,
+				88FB5D8D26BF4CEE9F8F1800 /* JosefinSans-ExtraLightItalic.ttf in Resources */,
+				28E169423A6C45DC952EAAC2 /* JosefinSans-Italic.ttf in Resources */,
+				D30CD0F2610143FCBFA5118E /* JosefinSans-Light.ttf in Resources */,
+				6281993DCA0E4B248B27AC0B /* JosefinSans-LightItalic.ttf in Resources */,
+				3B904863A6A64BC3A6404B77 /* JosefinSans-Medium.ttf in Resources */,
+				C8133B02CDF5484FBDA521C3 /* JosefinSans-MediumItalic.ttf in Resources */,
+				7B204352815D45D2BB1D54AB /* JosefinSans-Regular.ttf in Resources */,
+				F6EA25726E724310A1F22654 /* JosefinSans-SemiBold.ttf in Resources */,
+				C24F7E2E086F46D8BA22C7A1 /* JosefinSans-SemiBoldItalic.ttf in Resources */,
+				19A657CB7A144D34BFC16FD8 /* JosefinSans-Thin.ttf in Resources */,
+				A07EF4A17D6B4EA29608940C /* JosefinSans-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +322,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
@@ -379,7 +334,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		37382C802C74363A7FDC008A /* [CP] Copy Pods Resources */ = {
+		2FFD14FF952815EAB33839C8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -396,46 +351,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reDeCHO/Pods-reDeCHO-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4A8BEA6240038E6857576377 /* [CP] Copy Pods Resources */ = {
+		33144416BBEB6EA33BAAAC1B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO/Pods-reDeCHO-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO/Pods-reDeCHO-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reDeCHO/Pods-reDeCHO-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		71A0A1B5C85B93C0689682B8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-reDeCHO-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C6E5132BD7FA095D88ACE182 /* [CP] Check Pods Manifest.lock */ = {
+		3EBB8261F7C6CB15D76705F5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -457,21 +390,60 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E4D509E19D1451A8A10C8D34 /* [CP] Embed Pods Frameworks */ = {
+		B459D79500BA744892083E58 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO/Pods-reDeCHO-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO/Pods-reDeCHO-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reDeCHO/Pods-reDeCHO-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBD63216CC72E8438F01F0AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-reDeCHO-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E97E068942B1FE09AC271995 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -493,23 +465,6 @@
 			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FDD34BC45356D8C34A1416C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reDeCHO-reDeCHOTests/Pods-reDeCHO-reDeCHOTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -518,7 +473,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* reDeCHOTests.m in Sources */,
-				FCE91192EADB056C597ABC52 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,9 +482,6 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				328834FD27982955007E3EE0 /* RNAlgo.m in Sources */,
-				328834FB27982946007E3EE0 /* RNAlgo.swift in Sources */,
-				D3BB6341E16573EAEBDF14A4 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,7 +498,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04CD99D9D543174B93F05079 /* Pods-reDeCHO-reDeCHOTests.debug.xcconfig */;
+			baseConfigurationReference = 8FE5A19FC69E768077508E0A /* Pods-reDeCHO-reDeCHOTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -555,7 +506,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = reDeCHOTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -574,12 +525,12 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE2B730418652FF8F1058DDF /* Pods-reDeCHO-reDeCHOTests.release.xcconfig */;
+			baseConfigurationReference = 182E27F03C0771E4A486326F /* Pods-reDeCHO-reDeCHOTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = reDeCHOTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -598,7 +549,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 067177D25CAA67E325489115 /* Pods-reDeCHO.debug.xcconfig */;
+			baseConfigurationReference = 9F5A37C5C6EB0192652AF7DD /* Pods-reDeCHO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -616,7 +567,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = reDeCHO;
-				SWIFT_OBJC_BRIDGING_HEADER = "reDeCHO-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -625,7 +575,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F26F1765998B1357CDE9ED7 /* Pods-reDeCHO.release.xcconfig */;
+			baseConfigurationReference = 066A81306FCBADE98CBC5AFC /* Pods-reDeCHO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -642,7 +592,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = reDeCHO;
-				SWIFT_OBJC_BRIDGING_HEADER = "reDeCHO-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -697,7 +646,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -756,7 +705,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -804,25 +753,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		2C4E9B6A2790B34000D25D2F /* XCRemoteSwiftPackageReference "Swift-Algorand-Sdk.git" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Jesulonimi21/Swift-Algorand-Sdk.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2C4E9B6B2790B34100D25D2F /* swift-algorand-sdk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2C4E9B6A2790B34000D25D2F /* XCRemoteSwiftPackageReference "Swift-Algorand-Sdk.git" */;
-			productName = "swift-algorand-sdk";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }

@@ -3,6 +3,16 @@ import {Button, ScrollView, useToast, Text, VStack, Divider} from 'native-base';
 import {TouchableOpacity} from 'react-native';
 import {Linking} from 'react-native';
 import colors from '../../utils/colors';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+
+const storeOnboardState = async () => {
+  try {
+    await AsyncStorage.setItem('@onboadState', 'null')
+  } catch (e) {
+    // saving error
+  }
+}
 
 function Options({navigation}) {
   const toast = useToast();
@@ -29,6 +39,9 @@ function Options({navigation}) {
         <VStack space={10} p={2}>
           <TouchableOpacity
             onPress={() => {
+              
+              storeOnboardState(); 
+
               navigation.navigate('ProceedWallet');
             }}>
             <Text fontSize={20} fontFamily={'JosefinSans-Regular'}>

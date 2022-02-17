@@ -8,9 +8,33 @@ import {
 } from 'native-base';
 import colors from '../utils/colors';
 import { Platform } from "react-native";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const storeOnboardState = async () => {
+  try {
+    await AsyncStorage.setItem('@onboadState', 'Done')
+  } catch (e) {
+    // saving error
+  }
+}
+
+
+const getOnboardState = async () => {
+  try {
+    return value = await AsyncStorage.getItem('@onboadState')
+  } catch(e) {
+    // error reading value
+  }
+}
 
 function ProceedWallet({ navigation }) {
 
+  getOnboardState().then(data => data).then(value => {
+    
+if(value == 'Done'){
+  navigation.navigate('AnonymousApproval')
+}
+  });
 
         return (
           <ScrollView background={colors.white} style={{ flex: 1 }}>
@@ -64,6 +88,8 @@ function ProceedWallet({ navigation }) {
                   </Button>
                   <Button my={5} variant={'outline'}
                           onPress={() => {
+
+                            storeOnboardState()
                             navigation.navigate('Onboarding');
                           }}
                           colorScheme="teal">
