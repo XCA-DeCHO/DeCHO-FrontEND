@@ -1,7 +1,5 @@
 import React from 'react';
 import {Text, Image, VStack} from 'native-base';
-import {ImageBackground, Platform} from 'react-native';
-import {LinearGradient} from 'expo-linear-gradient';
 import colors from '../../utils/colors';
 function NameBox(props) {
   const [showModal, setShowModal] = React.useState(false);
@@ -17,6 +15,7 @@ function NameBox(props) {
     <Image
       source={{uri: props.img}}
       style={{height: 350}}
+      borderTopRadius={5}
       />
     </VStack>
     <VStack

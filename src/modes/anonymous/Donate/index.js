@@ -19,6 +19,7 @@ import colors from '../../../utils/colors';
 import Clipboard from '@react-native-clipboard/clipboard';
 import NameBox from '../../../globalComponents/infoBox/NameBox';
 import ProgressBox from '../../../globalComponents/ProgressBox/ProgressBox';
+import AnonymousApproval from '../Approval';
 
 function AnonymousDonate({navigation}) {
   const settings = require('../../../../assets/images/options.png');
@@ -139,7 +140,7 @@ function AnonymousDonate({navigation}) {
           {checkLoading()}
           <TouchableOpacity
             onPress={() => {
-              navigation.goBack();
+              navigation.push('AnonymousApproval');
             }}>
             <Text
               m={5}
