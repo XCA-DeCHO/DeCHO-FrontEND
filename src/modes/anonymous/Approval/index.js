@@ -176,7 +176,7 @@ function AnonymousApproval({navigation}) {
           {checkLoading()}
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate('AnonymousDonate');
+              navigation.push('AnonymousDonate');
             }}>
             <Text
               mx={10}
