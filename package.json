@@ -20,6 +20,7 @@
     "react-native-algo": "^0.1.7",
     "react-native-dots-pagination": "^0.2.0",
     "react-native-eject": "^0.1.2",
+    "react-native-fast-image": "^8.5.11",
     "react-native-pager-view": "^5.4.9",
     "react-native-qrcode-generator": "^1.2.2",
     "react-native-qrcode-svg": "^6.1.2",

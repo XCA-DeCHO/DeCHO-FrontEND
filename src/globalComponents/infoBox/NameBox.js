@@ -1,24 +1,25 @@
 import React from 'react';
-import {Text, Image, VStack} from 'native-base';
+import {Text, VStack} from 'native-base';
 import colors from '../../utils/colors';
+import FastImage from 'react-native-fast-image';
 function NameBox(props) {
   const [showModal, setShowModal] = React.useState(false);
 
-  return (<>
-  <VStack
-  backgroundColor={colors.white}
-  borderTopRadius={'md'}
-  borderBottomWidth={2}
-  borderBottomColor={colors.grey}
-  shadow={2}
-  >
-    <Image
-      source={{uri: props.img}}
-      style={{height: 350}}
-      borderTopRadius={5}
-      />
-    </VStack>
-    <VStack
+  return (
+    <>
+      <VStack
+        backgroundColor={colors.white}
+        borderTopRadius={'md'}
+        borderBottomWidth={2}
+        borderBottomColor={colors.grey}
+        shadow={2}>
+        <FastImage
+          style={{height: 350, borderTopLeftRadius: 5, borderTopRightRadius: 5}}
+          source={{uri: props.img}}
+          borderTopRadius={5}
+        />
+      </VStack>
+      <VStack
         bgColor={colors.white}
         style={{
           flex: 1,
@@ -27,8 +28,7 @@ function NameBox(props) {
           paddingRight: 20,
         }}
         shadow={2}
-        borderBottomRadius={'md'}
-        >
+        borderBottomRadius={'md'}>
         <Text
           color={colors.black}
           fontSize={'24'}
@@ -44,7 +44,7 @@ function NameBox(props) {
           {props.slogan}
         </Text>
       </VStack>
-      </>
+    </>
   );
 }
 
