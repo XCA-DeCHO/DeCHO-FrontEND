@@ -1,117 +1,172 @@
-import React from 'react';
-import {Button, ScrollView, useToast, Text, VStack, Divider} from 'native-base';
-import {TouchableOpacity} from 'react-native';
-import {Linking} from 'react-native';
-import colors from '../../utils/colors';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import React from "react";
+import {
+  Button,
+  Image,
+  ScrollView,
+  useToast,
+  Text,
+  VStack,
+  Divider,
+  HStack,
+} from "native-base";
+import { TouchableOpacity } from "react-native";
+import { Linking } from "react-native";
+import colors from "../../utils/colors";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
+const dechoImage = require("../../../assets/icons/dechoSettings.png");
+const Disconnect = require("../../../assets/icons/link-2-off.png");
+const contact = require("../../../assets/icons/user.png");
+const globe = require("../../../assets/icons/globe.png");
 
 const storeOnboardState = async () => {
   try {
-    await AsyncStorage.setItem('@onboadState', 'null')
+    await AsyncStorage.setItem("@onboadState", "null");
   } catch (e) {
     // saving error
   }
-}
+};
 
-function Options({navigation}) {
+function Options({ navigation }) {
   const toast = useToast();
 
   return (
-    <ScrollView bg={colors.white}>
-      <VStack w={'100%'} h={'100%'} px={5} pt={10} space={3}>
-        <TouchableOpacity
-          onPress={() => {
-            navigation.goBack();
-          }}>
-          <Text p={2} fontFamily={'JosefinSans-Bold'}>
-            {'<< Go Back'}
-          </Text>
-        </TouchableOpacity>
-        <Text
-          color={colors.black}
-          fontSize={'30'}
-          fontFamily={'JosefinSans-Bold'}
-          mx={2}>
-          Settings
-        </Text>
-        <Divider />
-        <VStack space={10} p={2}>
-          <TouchableOpacity
-            onPress={() => {
-              
-              storeOnboardState(); 
+    <>
+      <ScrollView bg={colors.black} w={"100%"} h={"100%"}>
+        <Image source={dechoImage} w="100%" />
+        <VStack w={"100%"} h={"100%"} px={5} space={3}>
+          <VStack p={2}>
+            <TouchableOpacity
+              style={{
+                height: 60,
+                borderRadius: 5,
+                alignItems: "center",
+                justifyContent: "space-between",
+                flexDirection: "row",
+              }}
+              onPress={() => {
+                storeOnboardState();
 
-              navigation.navigate('ProceedWallet');
-            }}>
-            <Text fontSize={20} fontFamily={'JosefinSans-Regular'}>
-              Disconnect
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => {
-              Linking.openURL('https://decho.finance/contact-us').catch((error) =>
-              toast.show({description: error}))
-            }}>
-            <Text fontSize={20} fontFamily={'JosefinSans-Regular'}>
-              Contact Us
-            </Text>
-          </TouchableOpacity>
+                navigation.navigate("ProceedWallet");
+              }}
+            >
+              <HStack alignItems={"center"}>
+                <Image
+                  width={5}
+                  height={5}
+                  marginRight={5}
+                  source={Disconnect}
+                />
+                <Text
+                  fontSize={24}
+                  color={colors.white}
+                  fontFamily={"JosefinSans-Regular"}
+                >
+                  Disconnect
+                </Text>
+              </HStack>
+              <Text
+                fontSize={24}
+                color={colors.white}
+                fontFamily={"JosefinSans-Regular"}
+              >
+                {" >"}
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                height: 60,
+                borderRadius: 5,
+                alignItems: "center",
+                justifyContent: "space-between",
+                flexDirection: "row",
+              }}
+              onPress={() => {
+                Linking.openURL("https://decho.finance/contact-us").catch(
+                  (error) => toast.show({ description: error })
+                );
+              }}
+            >
+              <HStack alignItems={"center"}>
+                <Image width={5} height={5} marginRight={5} source={contact} />
+                <Text
+                  fontSize={24}
+                  color={colors.white}
+                  fontFamily={"JosefinSans-Regular"}
+                >
+                  Contact Us
+                </Text>
+              </HStack>
+              <Text
+                fontSize={24}
+                color={colors.white}
+                fontFamily={"JosefinSans-Regular"}
+              >
+                {" >"}
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                height: 60,
+                borderRadius: 5,
+                alignItems: "center",
+                justifyContent: "space-between",
+                flexDirection: "row",
+              }}
+              onPress={() => {
+                Linking.openURL("https://decho.finance").catch((error) =>
+                  toast.show({ description: error })
+                );
+              }}
+            >
+              <HStack alignItems={"center"}>
+                <Image width={5} height={5} marginRight={5} source={globe} />
+                <Text
+                  fontSize={24}
+                  color={colors.white}
+                  fontFamily={"JosefinSans-Regular"}
+                >
+                  Visit Our Website
+                </Text>
+              </HStack>
+              <Text
+                fontSize={24}
+                color={colors.white}
+                fontFamily={"JosefinSans-Regular"}
+              >
+                {" >"}
+              </Text>
+            </TouchableOpacity>
+          </VStack>
         </VStack>
-        <Divider />
-        <Button
-          variant={'link'}
-          my={2}
-          onPress={() => {
-            Linking.openURL('https://decho.finance').catch((error) =>
-              toast.show({description: error}),
-            );
-          }}
-          colorScheme={'muted'}
-          alignSelf={'center'}>
-          <Text
-            fontSize={20}
-            color={colors.grey}
-            fontFamily={'JosefinSans-Bold'}>
-            Visit our website
-          </Text>
-        </Button>
-        {/*<Divider/>*/}
-        {/*<Text*/}
-        {/*  color={colors.black}*/}
-        {/*  fontSize={'30'}*/}
-        {/*  fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''} mx={2}>*/}
-        {/*  Balances*/}
-        {/*</Text>*/}
-        {/*<Text*/}
-        {/*  color={colors.black}*/}
-        {/*  fontSize={'20'}*/}
-        {/*  fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''} mx={2}>*/}
-        {/*  200 ALGO*/}
-        {/*</Text>*/}
-        {/*<Text*/}
-        {/*  color={colors.black}*/}
-        {/*  fontSize={'20'}*/}
-        {/*  fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''} mx={2}>*/}
-        {/*  30,000 Choice*/}
-        {/*</Text>*/}
-        {/*<Pressable onPress={()=>{*/}
-        {/*  Clipboard.setString('SWKJYUGFDSHKJI88GF90UUHGD45D')*/}
-        {/*  toast.show(*/}
-        {/*    {*/}
-        {/*      description : 'Copied Address'*/}
-        {/*    }*/}
-        {/*  )*/}
-        {/*}}*/}
-        {/*           flexDirection={'row'} background={colors.grey} p={5} borderRadius={'md'} justifyContent={'space-between'}>*/}
-        {/*  <Text color={colors.black} fontSize={'12'} fontFamily={Platform.OS === 'ios' ? 'Gill Sans' : ''}>*/}
-        {/*    SWKJYUGFDSHKJI88GF90UUHGD45D*/}
-        {/*  </Text>*/}
-        {/*  <Image source={copy} alt='applause' h='5' w='5' alignSelf={'center'} />*/}
-        {/*</Pressable>*/}
-      </VStack>
-    </ScrollView>
+      </ScrollView>
+      <TouchableOpacity
+        style={{
+          backgroundColor: colors.darkgrey,
+          position: "absolute",
+          right: 20,
+          bottom: 20,
+          height: 60,
+          width: 126,
+          borderRadius: 20,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+        onPress={() => {
+          navigation.goBack();
+        }}
+      >
+        <Text
+          color={colors.white}
+          fontSize={18}
+          fontFamily={"JosefinSans-Regular"}
+        >
+          {"< "}Go Back
+        </Text>
+      </TouchableOpacity>
+    </>
   );
 }
 
 export default Options;
+

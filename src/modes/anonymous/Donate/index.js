@@ -1,6 +1,7 @@
-import React from 'react';
-import QRCode from 'react-native-qrcode-svg';
-import ImageBackground from 'react-native/Libraries/Image/ImageBackground';
+import React from "react";
+import QRCode from "react-native-qrcode-svg";
+import { View } from "react-native";
+import ImageBackground from "react-native/Libraries/Image/ImageBackground";
 import {
   Button,
   HStack,
@@ -13,38 +14,42 @@ import {
   VStack,
   FlatList,
   Spinner,
-} from 'native-base';
-import {Dimensions, Linking, TouchableOpacity} from 'react-native';
-import colors from '../../../utils/colors';
-import Clipboard from '@react-native-clipboard/clipboard';
-import NameBox from '../../../globalComponents/infoBox/NameBox';
-import ProgressBox from '../../../globalComponents/ProgressBox/ProgressBox';
-import AnonymousApproval from '../Approval';
+} from "native-base";
+import { Dimensions, Linking, TouchableOpacity } from "react-native";
+import colors from "../../../utils/colors";
+import Clipboard from "@react-native-clipboard/clipboard";
+import NameBox from "../../../globalComponents/infoBox/NameBox";
 
-function AnonymousDonate({navigation}) {
-  const settings = require('../../../../assets/images/options.png');
-  const copy = require('../../../../assets/images/connectWallet/copy.png');
-  const logo = require('../../../../assets/images/logo/DechoLogomarkgradientlogomark.png');
-  const background = require('../../../../assets/images/bgImgs/blueWhite.jpg');
+//Images import
+const plus = require("../../../../assets/icons/+.png");
+const approval = require("../../../../assets/icons/check-circle-2.png");
+const settings = require("../../../../assets/icons/settings-2.png");
+const Search = require("../../../../assets/icons/search.png");
+const minimize = require("../../../../assets/icons/minimize-2.png");
+
+function AnonymousDonate({ navigation }) {
+  const copy = require("../../../../assets/images/connectWallet/copy.png");
+  const logo = require("../../../../assets/images/logo/DechoLogomarkgradientlogomark.png");
+  const background = require("../../../../assets/images/bgImgs/Artboard1.png");
 
   const toast = useToast();
 
-  const width = Dimensions.get('window').width;
-
+  const width = Dimensions.get("window").width;
 
   const [showModal, setShowModal] = React.useState(false);
-  const [address, setAddress] = React.useState('');
+  const [address, setAddress] = React.useState("");
+  const [menuToggle, setMenuToggle] = React.useState(false);
 
   const [approvals, setApprovals] = React.useState(null);
   // https://apps.apple.com/us/app/algorand-wallet/id1459898525
   //   https://play.google.com/store/apps/details?id=com.algorand.android&hl=en_US&gl=US
 
   if (!approvals) {
-    fetch('https://decho-staging.herokuapp.com/api/v1/causes')
+    fetch("https://decho-staging.herokuapp.com/api/v1/causes")
       .then((response) => response.json())
       .then((responseData) => {
         setApprovals(
-          responseData.data.filter((cause) => cause.status === 'Approved'),
+          responseData.data.filter((cause) => cause.status === "Approved")
         );
       })
       .catch((error) => console.log(error));
@@ -60,37 +65,40 @@ function AnonymousDonate({navigation}) {
           horizontal
           showsHorizontalScrollIndicator={false}
           pagingEnabled
-          renderItem={({item}) => {
+          renderItem={({ item }) => {
             return (
-              <VStack w={width} px={5} py={1}>
+              <VStack w={width} px={7} py={1}>
                 <NameBox
                   name={item.title}
                   slogan={item.short_description}
                   img={item.photo_url}
+                  balance={item.balance}
+                  goal={item.cause_approval.goal}
                 />
-                <HStack
-                  justifyContent={'center'}
-                  alignItems={'center'}
-                  space={5}
-                  mt={10}></HStack>
-                <ProgressBox
-                  progress={
-                    item.balance === 'Error: not Opted in' ? 0 : item.balance
-                  }
-                  goal={item.donations.goal}
-                  prefix={''}
-                />
-                <Button
-                  my={2}
-                  colorScheme={'teal'}
+                <TouchableOpacity
+                  style={{
+                    backgroundColor: colors.teal,
+                    height: 60,
+                    width: 126,
+                    borderRadius: 20,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginVertical: 20,
+                    flexDirection: "row",
+                  }}
                   onPress={() => {
                     setAddress(item.decho_wallet.address);
                     setShowModal(true);
-                  }}>
-                  <Text fontFamily={'JosefinSans-Regular'} color={colors.white}>
-                    Donate
+                  }}
+                >
+                  <Text
+                    color={colors.white}
+                    fontSize={18}
+                    fontFamily={"JosefinSans-Regular"}
+                  >
+                    Donate {">"}
                   </Text>
-                </Button>
+                </TouchableOpacity>
               </VStack>
             );
           }}
@@ -99,81 +107,169 @@ function AnonymousDonate({navigation}) {
     }
   }
 
-  return (
-    <ImageBackground source={background} style={{
-      height: '100%'
-    }}>
-    <ScrollView>
-      <VStack w={'100%'} h={'100%'} pt={10} space={3}>
-        <TouchableOpacity
+  function menuToggleFunction() {
+    if (menuToggle) {
+      return (
+        <View
           style={{
-            backgroundColor:colors.white,
-            borderRadius:150,
-            padding: 10,
-            width:50,
-            alignSelf:'flex-end',
-            margin:10,
-            elevation:5
+            width: 70,
+            height: 282,
+            shadowRadius: 15,
+            shadowColor: colors.grey,
+            elevation: 5,
+            backgroundColor: "#7C7C7C",
+            alignSelf: "center",
+            borderRadius: 99,
+            position: "absolute",
+            bottom: 15,
+            right: 15,
+            flexDirection: "column",
+            justifyContent: "space-around",
+            alignItems: "center",
           }}
+        >
+          <TouchableOpacity
             onPress={() => {
-              navigation.navigate('Options');
-            }}>
+              setMenuToggle(false);
+            }}
+          >
+            <Image
+              source={minimize}
+              mt={2}
+              width={6}
+              height={6}
+              alt={"Icon"}
+            ></Image>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              backgroundColor: colors.lightgrey,
+              padding: 10,
+              borderRadius: 99,
+            }}
+            onPress={() => {
+              navigation.push("AnonymousApproval");
+            }}
+          >
+            <Image source={approval} width={6} height={6} alt={"Icon"}></Image>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image source={plus} width={6} height={6} alt={"Icon"}></Image>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              backgroundColor: colors.lightgrey,
+              padding: 10,
+              borderRadius: 99,
+            }}
+            onPress={null}
+          >
+            <Image source={Search} width={6} height={6} alt={"Icon"}></Image>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("Options");
+            }}
+          >
             <Image
               source={settings}
-              alt={'settings'}
-              size={7}
-              alignSelf={'flex-end'}
-            />
+              width={6}
+              height={6}
+              mb={2}
+              alt={"Icon"}
+            ></Image>
           </TouchableOpacity>
+        </View>
+      );
+    } else {
+      return (
+        <TouchableOpacity
+          style={{
+            width: 60,
+            height: 60,
+            shadowRadius: 15,
+            shadowColor: colors.darkgrey,
+            elevation: 5,
+            backgroundColor: colors.darkgrey,
+            borderRadius: 99,
+            position: "absolute",
+            bottom: 15,
+            right: 15,
+            flexDirection: "column",
+            justifyContent: "space-around",
+            alignItems: "center",
+          }}
+          onPress={() => {
+            setMenuToggle(true);
+          }}
+        >
+          <Text fontSize={24} color={colors.white}>
+            {" "}
+            -{" "}
+          </Text>
+        </TouchableOpacity>
+      );
+    }
+  }
+  return (
+    <ImageBackground
+      source={background}
+      style={{
+        height: "100%",
+      }}
+    >
+      <ScrollView>
+        <VStack w={"100%"} h={"100%"} pt={10} space={3}>
           <Text
-            mx={5}
-            color={colors.black}
-            fontSize={'24'}
-            fontWeight={'500'}
-            fontFamily={'JosefinSans-Regular'}>
+            mx={7}
+            color={colors.white}
+            fontSize={"36"}
+            fontFamily={"JosefinSans-Bold"}
+          >
             Donate
           </Text>
           {/*<Input mx={5} placeholder={'Search....'} />*/}
-          <Text fontSize={10} px={5}>
-            Swipe left to see more {'>>'}
-          </Text>
           {checkLoading()}
           <TouchableOpacity
             onPress={() => {
-              navigation.push('AnonymousApproval');
-            }}>
+              navigation.push("AnonymousApproval");
+            }}
+          >
             <Text
               m={5}
               color={colors.black}
-              fontSize={'12'}
-              fontFamily={'JosefinSans-Regular'}
-              alignSelf={'flex-start'}>
-              {'<< View unapproved projects'}
+              fontSize={"12"}
+              fontFamily={"JosefinSans-Regular"}
+              alignSelf={"flex-start"}
+            >
+              {"<< View unapproved projects"}
             </Text>
           </TouchableOpacity>
         </VStack>
         <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-          <Modal.Content w={'95%'}>
+          <Modal.Content w={"95%"}>
             <Modal.CloseButton />
             <Modal.Header>Vote</Modal.Header>
             <Modal.Body>
               <Text
                 my={2}
                 color={colors.black}
-                fontSize={'16'}
-                fontFamily={'JosefinSans-Regular'}>
+                fontSize={"16"}
+                fontFamily={"JosefinSans-Regular"}
+              >
                 Make your vote towards this project by sending ALGO to this
                 address.
-                {'\n'}Your Algo will be refunded if this project does not reach
+                {"\n"}Your Algo will be refunded if this project does not reach
                 it's Goal
               </Text>
               <HStack
-                alignSelf={'center'}
+                alignSelf={"center"}
                 p={1}
                 m={2}
                 borderWidth={3}
                 borderColor={colors.grey}
-                borderRadius={'sm'}>
+                borderRadius={"sm"}
+              >
                 <QRCode
                   value={address}
                   size={250}
@@ -187,19 +283,21 @@ function AnonymousDonate({navigation}) {
                 onPress={() => {
                   Clipboard.setString(address);
                   toast.show({
-                    description: 'Copied Address',
+                    description: "Copied Address",
                   });
                 }}
-                flexDirection={'row'}
+                flexDirection={"row"}
                 background={colors.grey}
                 py={5}
                 px={2}
-                borderRadius={'md'}
-                justifyContent={'space-around'}>
+                borderRadius={"md"}
+                justifyContent={"space-around"}
+              >
                 <Text
-                  color={colors.black}
-                  fontSize={'8'}
-                  fontFamily={'JosefinSans-Regular'}>
+                  color={colors.white}
+                  fontSize={"8"}
+                  fontFamily={"JosefinSans-Regular"}
+                >
                   {address}
                 </Text>
                 <Image
@@ -207,25 +305,29 @@ function AnonymousDonate({navigation}) {
                   alt="applause"
                   h="3"
                   w="3"
-                  alignSelf={'center'}
+                  alignSelf={"center"}
                 />
               </Pressable>
             </Modal.Body>
             <Modal.Footer>
               <Button
                 onPress={() => {
-                  Linking.openURL('algorand://main');
+                  Linking.openURL("algorand://main");
                   setShowModal(false);
                 }}
-                colorScheme="teal">
+                colorScheme="teal"
+              >
                 Proceed
               </Button>
             </Modal.Footer>
           </Modal.Content>
         </Modal>
       </ScrollView>
+      {/* Floating Action Button clone */}
+      {menuToggleFunction()}
     </ImageBackground>
   );
 }
 
 export default AnonymousDonate;
+

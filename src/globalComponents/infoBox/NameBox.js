@@ -21,7 +21,6 @@ function NameBox(props) {
             <Text
               color={colors.white}
               fontSize={"24"}
-              fontWeight={"900"}
               fontFamily={"JosefinSans-Bold"}
               isTruncated
               maxW="250"
@@ -32,7 +31,6 @@ function NameBox(props) {
               mb={1}
               color={colors.white}
               fontSize={"12"}
-              fontWeight={"900"}
               fontFamily={"JosefinSans-Bold"}
               isTruncated
               maxW="250"
@@ -46,14 +44,10 @@ function NameBox(props) {
             backgroundColor={colors.lightgrey}
             padding={4}
           >
-            <Image width={5} height={5} source={globeImg} alt={'Website'}/>
+            <Image width={5} height={5} source={globeImg} alt={"Website"} />
           </Box>
         </HStack>
-        <ProgressBox
-                  progress={props.balance}
-                  goal={props.goal}
-                  prefix={''}
-                />
+        <ProgressBox progress={props.balance} goal={props.goal} prefix={""} />
       </VStack>
     </>
   );

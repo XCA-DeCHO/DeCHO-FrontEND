@@ -133,7 +133,7 @@ function AnonymousApproval({ navigation }) {
                       fontSize={18}
                       fontFamily={"JosefinSans-Regular"}
                     >
-                      Vote {'>'}
+                      Vote {">"}
                     </Text>
                   </TouchableOpacity>
                 </HStack>
@@ -159,18 +159,12 @@ function AnonymousApproval({ navigation }) {
               mx={7}
               color={colors.white}
               fontSize={"36"}
-              fontWeight={"900"}
               fontFamily={"JosefinSans-Bold"}
             >
               Vote
             </Text>
-            
+
             {checkLoading()}
-            <TouchableOpacity
-              onPress={() => {
-                navigation.push("AnonymousDonate");
-              }}
-            ></TouchableOpacity>
           </VStack>
           <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
             <Modal.Content w={"95%"}>
@@ -250,20 +244,43 @@ function AnonymousApproval({ navigation }) {
           </Modal>
         </ScrollView>
       </ImageBackground>
-      <View style={{width:208,height:60,backgroundColor:colors.darkgrey, alignSelf:'center', borderRadius:99, position:'absolute', bottom:50, flexDirection:'row', justifyContent:'space-around', alignItems:'center'}}>
-      <TouchableOpacity>
-      <Image source={plus} width={6} height={6} alt={'Icon'}></Image></TouchableOpacity>
-      <TouchableOpacity style={{backgroundColor:colors.lightgrey, padding:10, borderRadius:99}}
-      onPress={
-        ()=>{navigation.navigate('AnonymousDonate')}
-      }>
-      <Image source={donation1} width={6} height={6} alt={'Icon'}></Image>
-      </TouchableOpacity><TouchableOpacity onPress={
-        ()=>{navigation.navigate('Options')}
-      }>
-      <Image source={settings} width={6} height={6} alt={'Icon'}></Image></TouchableOpacity>
+      <View
+        style={{
+          width: 208,
+          height: 60,
+          backgroundColor: colors.darkgrey,
+          alignSelf: "center",
+          borderRadius: 99,
+          position: "absolute",
+          bottom: 50,
+          flexDirection: "row",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
+      >
+        <TouchableOpacity>
+          <Image source={plus} width={6} height={6} alt={"Icon"}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            backgroundColor: colors.lightgrey,
+            padding: 10,
+            borderRadius: 99,
+          }}
+          onPress={() => {
+            navigation.push("AnonymousDonate");
+          }}
+        >
+          <Image source={donation1} width={6} height={6} alt={"Icon"}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Options");
+          }}
+        >
+          <Image source={settings} width={6} height={6} alt={"Icon"}></Image>
+        </TouchableOpacity>
       </View>
-
     </VStack>
   );
 }

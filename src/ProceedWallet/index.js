@@ -40,7 +40,6 @@ function ProceedWallet({ navigation }) {
           mb={5}
           color={colors.white}
           fontSize={"36"}
-          fontWeight={"900"}
           fontFamily={"JosefinSans-Bold"}
         >
           DeCHO
@@ -49,7 +48,6 @@ function ProceedWallet({ navigation }) {
           mb={5}
           color={colors.white}
           fontSize={"14"}
-          fontWeight={"900"}
           fontFamily={"JosefinSans-Bold"}
         >
           How do you want to proceed?
@@ -66,7 +64,7 @@ function ProceedWallet({ navigation }) {
           }}
         >
           <Image width={5} height={5} marginRight={5} source={linkImg}/>
-          <Text fontSize={24} fontFamily={"JosefinSans-Bold"}>
+          <Text fontSize={24} fontFamily={"JosefinSans-Regular"}>
             Connect Wallet
           </Text>
         </TouchableOpacity>
@@ -86,7 +84,7 @@ function ProceedWallet({ navigation }) {
           }}
         >
           <Image width={5} height={5} marginRight={5} source={eyeOffImg}/>
-          <Text fontSize={24} fontFamily={"JosefinSans-Bold"}>
+          <Text fontSize={24} fontFamily={"JosefinSans-Regular"}>
             Stay Anonymous
           </Text>
         </TouchableOpacity>
