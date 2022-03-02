@@ -95,9 +95,7 @@ function AnonymousDonate({ navigation }) {
                     color={colors.white}
                     fontSize={18}
                     fontFamily={"JosefinSans-Regular"}
-                  >
-                    Donate {">"}
-                  </Text>
+                  >Donate {">"}</Text>
                 </TouchableOpacity>
               </VStack>
             );
@@ -230,21 +228,6 @@ function AnonymousDonate({ navigation }) {
           </Text>
           {/*<Input mx={5} placeholder={'Search....'} />*/}
           {checkLoading()}
-          <TouchableOpacity
-            onPress={() => {
-              navigation.push("AnonymousApproval");
-            }}
-          >
-            <Text
-              m={5}
-              color={colors.black}
-              fontSize={"12"}
-              fontFamily={"JosefinSans-Regular"}
-              alignSelf={"flex-start"}
-            >
-              {"<< View unapproved projects"}
-            </Text>
-          </TouchableOpacity>
         </VStack>
         <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
           <Modal.Content w={"95%"}>
