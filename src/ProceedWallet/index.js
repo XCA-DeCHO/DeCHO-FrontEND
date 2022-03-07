@@ -103,8 +103,8 @@ function ProceedWallet({ navigation }) {
           fontFamily={"JosefinSans-Regular"}
           color={colors.white}
         >
-          {"\n"}Staying Anonymous, will let you use an external wallet to
-          ssimply send the assets to the generated Addresses
+          {"\n"}Staying Anonymous will let you use an external wallet to
+          simply send the assets to the generated Addresses
         </Text>
       </VStack>
     </ScrollView>

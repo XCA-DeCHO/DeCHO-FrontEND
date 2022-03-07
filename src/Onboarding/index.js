@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, VStack, Text, HStack, Pressable} from 'native-base';
+import {Image, VStack, Text, HStack, Pressable, ScrollView} from 'native-base';
 import colors from '../utils/colors';
 import Dots from 'react-native-dots-pagination';
 import PagerView from 'react-native-pager-view';
@@ -8,18 +8,20 @@ const applause = require('../../assets/images/onboarding/applause.png');
 const award = require('../../assets/images/onboarding/award.png');
 const funding = require('../../assets/images/onboarding/funding.png');
 const verified = require('../../assets/images/onboarding/verified.png');
+const tut1 = require('../../assets/images/onboarding/tut1.png');
+const tut2 = require('../../assets/images/onboarding/tut2.png');
+
 
 function Onboarding({navigation}) {
   return (
     <PagerView style={{flex: 1}} initialPage={0}>
+      <ScrollView background={colors.black}>
       <VStack
         w="100%"
-        h="100%"
-        background={colors.onboardcolor1}
         justifyContent={'flex-end'}
         p={5}>
         <Image
-          mb={50}
+          my={50}
           source={applause}
           alt="applause"
           h="300"
@@ -32,11 +34,28 @@ function Onboarding({navigation}) {
           fontWeight={'500'}
           fontSize={'24'}
           fontFamily={'JosefinSans-Bold'}>
-          Congratulations!
+          Welcome!
         </Text>
         <Text color={colors.white} fontFamily={'JosefinSans-Regular'}>
-          You Just Connected your Wallet
+          View the tutorial before proceeding.
         </Text>
+        <Image
+          mt={15}
+          source={tut1}
+          alt="applause"
+          w="100%"
+          h={600}
+          resizeMode='contain'
+          alignSelf={'center'}
+        />
+        <Image
+          source={tut2}
+          alt="applause"
+          w="100%"
+          h={500}
+          resizeMode='contain'
+          alignSelf={'center'}
+        />
         <HStack mt={185} alignSelf={'flex-end'}>
           <Dots
             length={4}
@@ -46,10 +65,11 @@ function Onboarding({navigation}) {
           />
         </HStack>
       </VStack>
+      </ScrollView>
       <VStack
         w="100%"
         h="100%"
-        background={colors.onboardcolor2}
+        background={colors.black}
         justifyContent={'flex-end'}
         p={5}>
         <Image
@@ -83,7 +103,7 @@ function Onboarding({navigation}) {
       <VStack
         w="100%"
         h="100%"
-        background={colors.onboardcolor3}
+        background={colors.black}
         justifyContent={'flex-end'}
         p={5}>
         <Image
@@ -100,11 +120,10 @@ function Onboarding({navigation}) {
           fontWeight={'500'}
           fontSize={'24'}
           fontFamily={'JosefinSans-Bold'}>
-          View listed projects here.
+          View listed projects.
         </Text>
         <Text color={colors.white} fontFamily={'JosefinSans-Regular'}>
-          If a project reaches its goal. It will be funded, else all funds will
-          be returned to the donors address.
+          If a project reaches its goal, it will be funded. All funds will be returned to the donors adddress if it happens that the project does not reach it's goal.
         </Text>
         <HStack mt={155} alignSelf={'flex-end'}>
           <Dots
@@ -118,7 +137,7 @@ function Onboarding({navigation}) {
       <VStack
         w="100%"
         h="100%"
-        background={colors.onboardcolor4}
+        background={colors.black}
         justifyContent={'flex-end'}
         p={5}>
         <Image
@@ -135,10 +154,15 @@ function Onboarding({navigation}) {
           fontWeight={'500'}
           fontSize={'24'}
           fontFamily={'JosefinSans-Bold'}>
-          Finally, you can earn choice token for performing basic tasks.
+          Finally, you can earn choice token for voting.
         </Text>
         <Text color={colors.white} fontFamily={'JosefinSans-Regular'}>
           Ensure, you opt in to the Choice ASA
+          {'\n'}
+          {'\n'}
+          Testnet ASA ID : 71501663
+          {'\n'}
+          Mainnet ASA ID : 297995609
         </Text>
         <Pressable
           onPress={() => {
@@ -153,7 +177,7 @@ function Onboarding({navigation}) {
           justifyContent={'center'}
           background={colors.white}>
           <Text
-            color={colors.onboardcolor4}
+            color={colors.black}
             fontWeight={'500'}
             fontSize={'20'}
             fontFamily={'JosefinSans-Regular'}>

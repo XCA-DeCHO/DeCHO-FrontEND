@@ -108,6 +108,7 @@ function Options({ navigation }) {
             <TouchableOpacity
               style={{
                 height: 60,
+                marginBottom: 110,
                 borderRadius: 5,
                 alignItems: "center",
                 justifyContent: "space-between",
@@ -119,7 +120,7 @@ function Options({ navigation }) {
                 );
               }}
             >
-              <HStack alignItems={"center"}>
+              <HStack alignItems={"center"} >
                 <Image width={5} height={5} marginRight={5} source={globe} />
                 <Text
                   fontSize={24}
@@ -143,6 +144,7 @@ function Options({ navigation }) {
       <TouchableOpacity
         style={{
           backgroundColor: colors.darkgrey,
+          elevation : 5,
           position: "absolute",
           right: 20,
           bottom: 20,

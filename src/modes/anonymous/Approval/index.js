@@ -85,6 +85,7 @@ function AnonymousApproval({ navigation }) {
                   img={item.photo_url}
                   balance={item.balance}
                   goal={item.cause_approval.goal}
+                  website={item.long_description}
                 />
                 <HStack
                   justifyContent={"center"}
@@ -93,7 +94,7 @@ function AnonymousApproval({ navigation }) {
                 >
                   <TouchableOpacity
                     style={{
-                      backgroundColor: colors.darkgrey,
+                      backgroundColor: colors.grey,
                       height: 60,
                       width: 126,
                       borderRadius: 20,
@@ -154,7 +155,7 @@ function AnonymousApproval({ navigation }) {
         }}
       >
         <ScrollView>
-          <VStack w={"100%"} h={"100%"} pt={45} space={3}>
+          <VStack w={"100%"} h={"100%"} pt={45} space={3} mb={110}>
             <Text
               mx={7}
               color={colors.white}
@@ -253,12 +254,20 @@ function AnonymousApproval({ navigation }) {
           borderRadius: 99,
           position: "absolute",
           bottom: 50,
+          elevation:5,
           flexDirection: "row",
           justifyContent: "space-around",
           alignItems: "center",
         }}
       >
-        <TouchableOpacity>
+        <TouchableOpacity
+        onPress={
+          ()=>{
+            toast.show({
+              description: "Create A Campaign feature coming soon!",
+            });
+          }
+        }>
           <Image source={plus} width={6} height={6} alt={"Icon"}></Image>
         </TouchableOpacity>
         <TouchableOpacity
