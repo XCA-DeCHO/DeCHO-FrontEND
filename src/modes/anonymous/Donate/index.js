@@ -112,9 +112,7 @@ function AnonymousDonate({ navigation }) {
           style={{
             width: 70,
             height: 282,
-            shadowRadius: 15,
-            shadowColor: colors.grey,
-            elevation: 5,
+            elevation : 5,
             backgroundColor: "#7C7C7C",
             alignSelf: "center",
             borderRadius: 99,
@@ -151,7 +149,13 @@ function AnonymousDonate({ navigation }) {
           >
             <Image source={approval} width={6} height={6} alt={"Icon"}></Image>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={
+            ()=>{
+              toast.show({
+                description: "Create A Campaign feature coming soon!",
+              });
+            }
+          }>
             <Image source={plus} width={6} height={6} alt={"Icon"}></Image>
           </TouchableOpacity>
           <TouchableOpacity
@@ -160,8 +164,13 @@ function AnonymousDonate({ navigation }) {
               padding: 10,
               borderRadius: 99,
             }}
-            onPress={null}
-          >
+            onPress={
+              ()=>{
+                toast.show({
+                  description: "Search feature coming soon!",
+                });
+              }
+            }          >
             <Image source={Search} width={6} height={6} alt={"Icon"}></Image>
           </TouchableOpacity>
           <TouchableOpacity
@@ -185,8 +194,6 @@ function AnonymousDonate({ navigation }) {
           style={{
             width: 60,
             height: 60,
-            shadowRadius: 15,
-            shadowColor: colors.darkgrey,
             elevation: 5,
             backgroundColor: colors.darkgrey,
             borderRadius: 99,
@@ -217,7 +224,7 @@ function AnonymousDonate({ navigation }) {
       }}
     >
       <ScrollView>
-        <VStack w={"100%"} h={"100%"} pt={10} space={3}>
+        <VStack w={"100%"} h={"100%"} pt={10} space={3} mb={110}>
           <Text
             mx={7}
             color={colors.white}
@@ -313,4 +320,3 @@ function AnonymousDonate({ navigation }) {
 }
 
 export default AnonymousDonate;
-

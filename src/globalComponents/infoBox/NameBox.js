@@ -1,4 +1,5 @@
 import React from "react";
+import { TouchableOpacity, Linking } from 'react-native';
 import { Box, HStack, Text, VStack, Image } from "native-base";
 import colors from "../../utils/colors";
 import FastImage from "react-native-fast-image";
@@ -11,19 +12,17 @@ function NameBox(props) {
 
   return (
     <>
-      <VStack backgroundColor={colors.grey} borderRadius={"20"}>
+      <VStack backgroundColor={colors.grey} borderRadius={"20"} shadow={5}>
         <FastImage
           style={{ height: 350, borderRadius: 20, borderTopRightRadius: 20 }}
           source={{ uri: props.img }}
         />
         <HStack px={5} pt={4} justifyContent={"space-between"}>
-          <VStack>
+          <VStack mr={2} ml={-2}>
             <Text
               color={colors.white}
               fontSize={"24"}
               fontFamily={"JosefinSans-Bold"}
-              isTruncated
-              maxW="250"
             >
               {props.name}
             </Text>
@@ -38,14 +37,21 @@ function NameBox(props) {
               {props.slogan}
             </Text>
           </VStack>
+          <TouchableOpacity
+           onPress={() => {
+            Linking.openURL("https://" + props.slogan).catch(
+              (error) => toast.show({ description: error })
+            );
+          }}>
           <Box
             borderRadius={99}
-            h={50}
+            size={10}
             backgroundColor={colors.lightgrey}
-            padding={4}
+            padding={3}
           >
-            <Image width={5} height={5} source={globeImg} alt={"Website"} />
+            <Image width={4} height={4} source={globeImg} alt={"Website"} />
           </Box>
+          </TouchableOpacity>
         </HStack>
         <ProgressBox progress={props.balance} goal={props.goal} prefix={""} />
       </VStack>

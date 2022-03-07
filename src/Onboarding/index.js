@@ -123,8 +123,7 @@ function Onboarding({navigation}) {
           View listed projects.
         </Text>
         <Text color={colors.white} fontFamily={'JosefinSans-Regular'}>
-          If a project reaches its goal. It will be funded, else all funds will
-          be returned to the donors address.
+          If a project reaches its goal, it will be funded. All funds will be returned to the donors adddress if it happens that the project does not reach it's goal.
         </Text>
         <HStack mt={155} alignSelf={'flex-end'}>
           <Dots
@@ -159,6 +158,11 @@ function Onboarding({navigation}) {
         </Text>
         <Text color={colors.white} fontFamily={'JosefinSans-Regular'}>
           Ensure, you opt in to the Choice ASA
+          {'\n'}
+          {'\n'}
+          Testnet ASA ID : 71501663
+          {'\n'}
+          Mainnet ASA ID : 297995609
         </Text>
         <Pressable
           onPress={() => {
