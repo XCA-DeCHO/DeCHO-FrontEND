@@ -231,7 +231,7 @@ function AnonymousDonate({ navigation }) {
             fontSize={"36"}
             fontFamily={"JosefinSans-Bold"}
           >
-            Donate
+            Donate [TestNet]
           </Text>
           {/*<Input mx={5} placeholder={'Search....'} />*/}
           {checkLoading()}

@@ -42,7 +42,7 @@ function ProceedWallet({ navigation }) {
           fontSize={"36"}
           fontFamily={"JosefinSans-Bold"}
         >
-          DeCHO
+          DeCHO [TestNet]
         </Text>
         <Text
           mb={5}

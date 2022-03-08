@@ -162,7 +162,7 @@ function AnonymousApproval({ navigation }) {
               fontSize={"36"}
               fontFamily={"JosefinSans-Bold"}
             >
-              Vote
+              Vote [TestNet]
             </Text>
 
             {checkLoading()}
