@@ -55,7 +55,7 @@ function AnonymousApproval({ navigation }) {
   };
 
   if (!approvals) {
-    fetch("https://decho-staging.herokuapp.com/api/v1/causes")
+    fetch("https://decho-mainnet.herokuapp.com/api/v1/causes")
       .then((response) => response.json())
       .then((responseData) => {
         setApprovals(
@@ -295,4 +295,3 @@ function AnonymousApproval({ navigation }) {
 }
 
 export default AnonymousApproval;
-
