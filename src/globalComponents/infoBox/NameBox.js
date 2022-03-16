@@ -53,7 +53,9 @@ function NameBox(props) {
           </Box>
           </TouchableOpacity>
         </HStack>
+        <TouchableOpacity onPress={() => {props.navigation.navigate('WebviewURL', {address : props.address})}}>
         <ProgressBox progress={props.balance} goal={props.goal} prefix={""} />
+        </TouchableOpacity>
       </VStack>
     </>
   );

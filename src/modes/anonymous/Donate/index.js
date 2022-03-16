@@ -74,6 +74,8 @@ function AnonymousDonate({ navigation }) {
                   img={item.photo_url}
                   balance={item.balance}
                   goal={item.cause_approval.goal}
+                  address={item.decho_wallet.address}
+                  navigation={navigation}
                 />
                 <TouchableOpacity
                   style={{

@@ -34,10 +34,10 @@ function WalletConnect({ navigation }) {
     });
 
   return (
-    <ScrollView background={colors.black} style={{ flex: 1 }}>
-      <VStack w="100%" h="100%" px={5} pt={10}>
+      <VStack w="100%" h="100%" pt={10} background={colors.black}>
         <Text
           mt={5}
+          px={5}
           mb={5}
           color={colors.white}
           fontSize={"18"}
@@ -47,35 +47,38 @@ function WalletConnect({ navigation }) {
         </Text>
         <WebView source={{ uri: 'https://decentralized-decisions.app/' }} style={{
           width:'100%',
-          height:550
         }} />
         <TouchableOpacity
-                    style={{
-                      backgroundColor: colors.teal,
-                      height: 60,
-                      width: 126,
-                      borderRadius: 20,
-                      alignItems: "center",
-                      justifyContent: "center",
-                      marginVertical: 20,
-                      flexDirection: "row",
-                    }}
-                    onPress={() => {
-                      navigation.goBack()
-                    }}
-                  >
-                    <Text
-                      color={colors.white}
-                      fontSize={18}
-                      fontFamily={"JosefinSans-Regular"}
-                    >
-                      {"<"} Cancel
-                    </Text>
-                  </TouchableOpacity>
-      </VStack>
+      style={backButtonStyle}
+      onPress={() => {
+        navigation.goBack()
+      }}
+    >
+      <Text
+        color={colors.white}
+        fontSize={18}
+        fontFamily={"JosefinSans-Regular"}
+      >
+        {"<"} Go Back
+      </Text>
+</TouchableOpacity>
+        </VStack>
 
-    </ScrollView>
   );
+}
+
+const backButtonStyle={
+  position:'absolute',
+  backgroundColor: colors.teal,
+  height: 60,
+  bottom:0,
+  right:0,
+  width: 126,
+  borderRadius: 20,
+  alignItems: "center",
+  justifyContent: "center",
+  margin: 20,
+  flexDirection: "row",
 }
 
 export default WalletConnect;

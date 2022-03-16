@@ -14,6 +14,7 @@ import Options from './src/globalComponents/Options'
 import AnonymousDonate from "./src/modes/anonymous/Donate";
 import CreateCampaign from './src/CreateCampaign';
 import WalletConnect from './src/WalletConnect';
+import WebviewURL from './src/WebView';
 
 import { NativeBaseProvider } from 'native-base/src/core/NativeBaseProvider';
 import { StatusBar } from 'native-base';
@@ -39,6 +40,7 @@ function App() {
           <Stack.Screen name="Options" component={Options} />
           <Stack.Screen name="CreateCampaign" component={CreateCampaign} />
           <Stack.Screen name="WalletConnect" component={WalletConnect} />
+          <Stack.Screen name="WebviewURL" component={WebviewURL} />
 
         </Stack.Navigator>
       </NavigationContainer>

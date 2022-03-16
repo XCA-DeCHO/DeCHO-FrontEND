@@ -86,6 +86,8 @@ function AnonymousApproval({ navigation }) {
                   balance={item.balance}
                   goal={item.cause_approval.goal}
                   website={item.long_description}
+                  address={item.decho_wallet.address}
+                  navigation={navigation}
                 />
                 <HStack
                   justifyContent={"center"}
