@@ -95,7 +95,9 @@ function AnonymousDonate({ navigation }) {
                     color={colors.white}
                     fontSize={18}
                     fontFamily={"JosefinSans-Regular"}
-                  >Donate {">"}</Text>
+                  >
+                    Donate {">"}
+                  </Text>
                 </TouchableOpacity>
               </VStack>
             );
@@ -112,7 +114,7 @@ function AnonymousDonate({ navigation }) {
           style={{
             width: 70,
             height: 282,
-            elevation : 5,
+            elevation: 5,
             backgroundColor: "#7C7C7C",
             alignSelf: "center",
             borderRadius: 99,
@@ -125,6 +127,10 @@ function AnonymousDonate({ navigation }) {
           }}
         >
           <TouchableOpacity
+            style={{
+              padding: 10,
+              borderRadius: 99,
+            }}
             onPress={() => {
               setMenuToggle(false);
             }}
@@ -149,13 +155,18 @@ function AnonymousDonate({ navigation }) {
           >
             <Image source={approval} width={6} height={6} alt={"Icon"}></Image>
           </TouchableOpacity>
-          <TouchableOpacity onPress={
-            ()=>{
+          <TouchableOpacity
+            style={{
+              padding: 10,
+              borderRadius: 99,
+            }}
+            onPress={() => {
+              navigation.navigate("CreateCampaign");
               toast.show({
                 description: "Create A Campaign feature coming soon!",
               });
-            }
-          }>
+            }}
+          >
             <Image source={plus} width={6} height={6} alt={"Icon"}></Image>
           </TouchableOpacity>
           <TouchableOpacity
@@ -164,16 +175,19 @@ function AnonymousDonate({ navigation }) {
               padding: 10,
               borderRadius: 99,
             }}
-            onPress={
-              ()=>{
-                toast.show({
-                  description: "Search feature coming soon!",
-                });
-              }
-            }          >
+            onPress={() => {
+              toast.show({
+                description: "Search feature coming soon!",
+              });
+            }}
+          >
             <Image source={Search} width={6} height={6} alt={"Icon"}></Image>
           </TouchableOpacity>
           <TouchableOpacity
+            style={{
+              padding: 10,
+              borderRadius: 99,
+            }}
             onPress={() => {
               navigation.navigate("Options");
             }}
@@ -320,3 +334,4 @@ function AnonymousDonate({ navigation }) {
 }
 
 export default AnonymousDonate;
+

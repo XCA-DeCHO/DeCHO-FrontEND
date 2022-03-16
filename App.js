@@ -12,6 +12,8 @@ import AnonymousApproval from "./src/modes/anonymous/Approval";
 import ViewInfo from "./src/Info/ViewInfo";
 import Options from './src/globalComponents/Options'
 import AnonymousDonate from "./src/modes/anonymous/Donate";
+import CreateCampaign from './src/CreateCampaign';
+import WalletConnect from './src/WalletConnect';
 
 import { NativeBaseProvider } from 'native-base/src/core/NativeBaseProvider';
 import { StatusBar } from 'native-base';
@@ -35,6 +37,8 @@ function App() {
           <Stack.Screen name="AnonymousDonate" component={AnonymousDonate} />
           <Stack.Screen name="ViewInfo" component={ViewInfo} />
           <Stack.Screen name="Options" component={Options} />
+          <Stack.Screen name="CreateCampaign" component={CreateCampaign} />
+          <Stack.Screen name="WalletConnect" component={WalletConnect} />
 
         </Stack.Navigator>
       </NavigationContainer>

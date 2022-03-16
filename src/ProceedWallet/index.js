@@ -62,6 +62,9 @@ function ProceedWallet({ navigation }) {
             justifyContent: "center",
             flexDirection: 'row'
           }}
+          onPress={() => {
+            navigation.navigate("WalletConnect");
+          }}
         >
           <Image width={5} height={5} marginRight={5} source={linkImg}/>
           <Text fontSize={24} fontFamily={"JosefinSans-Regular"}>

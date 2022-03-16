@@ -263,6 +263,7 @@ function AnonymousApproval({ navigation }) {
         <TouchableOpacity
         onPress={
           ()=>{
+            navigation.navigate('CreateCampaign');
             toast.show({
               description: "Create A Campaign feature coming soon!",
             });
