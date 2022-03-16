@@ -73,7 +73,7 @@ function AnonymousDonate({ navigation }) {
                   slogan={item.short_description}
                   img={item.photo_url}
                   balance={item.balance}
-                  goal={item.cause_approval.goal}
+                  goal={item.donations.goal}
                 />
                 <TouchableOpacity
                   style={{
