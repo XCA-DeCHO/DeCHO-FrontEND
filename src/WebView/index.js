@@ -9,17 +9,7 @@ function WebviewURL({ route, navigation }) {
  
   return (<>
       <VStack w="100%" h="100%" pt={10} background={colors.black}>
-        <Text
-          mt={5}
-          mb={5}
-          px={5} 
-          color={colors.white}
-          fontSize={"18"}
-          fontFamily={"JosefinSans-Bold"}
-        >
-          DeCHO Wallet Explore [TestNet]
-        </Text>
-        <WebView source={{ uri: 'https://testnet.algoexplorer.io/address/'+route.params.address }} style={{
+        <WebView source={{ uri: route.params.source}} style={{
           width:'100%',
         }} />
         

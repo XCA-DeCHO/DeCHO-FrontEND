@@ -8,7 +8,6 @@ import ProgressBox from "../ProgressBox/ProgressBox";
 //iconGlobe
 const globeImg = require("../../../assets/icons/globe.png");
 function NameBox(props) {
-  const [showModal, setShowModal] = React.useState(false);
 
   return (
     <>
@@ -53,7 +52,7 @@ function NameBox(props) {
           </Box>
           </TouchableOpacity>
         </HStack>
-        <TouchableOpacity onPress={() => {props.navigation.navigate('WebviewURL', {address : props.address})}}>
+        <TouchableOpacity onPress={() => {props.navigation.navigate('WebviewURL', {source : "https://testnet.algoexplorer.io/address/"+props.address})}}>
         <ProgressBox progress={props.balance} goal={props.goal} prefix={""} />
         </TouchableOpacity>
       </VStack>
