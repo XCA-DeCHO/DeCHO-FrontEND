@@ -4,6 +4,7 @@ import colors from "../utils/colors";
 import { TouchableOpacity, View} from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { WebView } from "react-native-webview";
+import { WALLET_CONNECT_BASE_URL } from "@env";
 
 const getOnboardState = async () => {
   try {
@@ -32,7 +33,7 @@ function WalletConnect({ navigation }) {
         fontFamily={"JosefinSans-Bold"}
       ></Text>
       <WebView
-        source={{ uri: "https://decho.herokuapp.com/wallet" }}
+        source={{ uri: WALLET_CONNECT_BASE_URL }}
         style={{
           width: "100%",
         }}

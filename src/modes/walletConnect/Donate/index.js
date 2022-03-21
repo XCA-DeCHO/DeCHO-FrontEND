@@ -157,7 +157,7 @@ function wcDonate({ navigation }) {
               borderRadius: 99,
             }}
             onPress={() => {
-              navigation.push("AnonymousApproval");
+              navigation.push("wcApproval");
             }}
           >
             <Image source={approval} width={6} height={6} alt={"Icon"}></Image>
@@ -301,8 +301,8 @@ function wcDonate({ navigation }) {
             <Modal.Footer>
               <Button
                 onPress={() => {
-                navigation.navigate('WebviewURL', {source : WALLET_CONNECT_BASE_URL+"?recipientAddress="+address+"&amountToSend="+onChangeValue+"&type=makeTxn"})                  
-                setShowModal(false);}}
+                  navigation.navigate('WebviewURL', {source : WALLET_CONNECT_BASE_URL+"?recipientAddress="+address+"&amountToSend="+onChangeValue+"&requestType=makeTxn&txnMethod=algo"})
+                  setShowModal(false);}}
                 colorScheme="teal"
               >
                 Proceed

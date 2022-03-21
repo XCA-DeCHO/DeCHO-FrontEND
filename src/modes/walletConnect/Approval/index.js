@@ -219,7 +219,7 @@ function wcApproval({ navigation }) {
               <Modal.Footer>
                 <Button
                   onPress={() => {
-                    navigation.navigate('WebviewURL', {source : WALLET_CONNECT_BASE_URL+"?recipientAddress="+address+"&amountToSend="+onChangeValue+"&type=makeTxn"})
+                    navigation.navigate('WebviewURL', {source : WALLET_CONNECT_BASE_URL+"?recipientAddress="+address+"&amountToSend="+onChangeValue+"&requestType=makeTxn&txnMethod=asa"})
                     setShowModal(false);
                   }}
                   bgColor={colors.teal}
