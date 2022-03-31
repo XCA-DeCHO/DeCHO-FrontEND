@@ -8,9 +8,16 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 const linkImg = require('../../assets/icons/link.png');
 const eyeOffImg = require('../../assets/icons/eye-off.png');
 
-const storeOnboardState = async () => {
+const storeOnboardStateAnonymous = async () => {
   try {
     await AsyncStorage.setItem("@onboadState", "Done");
+  } catch (e) {
+    // saving error
+  }
+};
+const storeOnboardStateWalletConnect = async () => {
+  try {
+    await AsyncStorage.setItem("@onboadState", "DoneWC");
   } catch (e) {
     // saving error
   }
@@ -29,6 +36,8 @@ function ProceedWallet({ navigation }) {
     .then((value) => {
       if (value == "Done") {
         navigation.navigate("AnonymousApproval");
+      }else if(value== "DoneWC"){
+        navigation.navigate("wcApproval");
       }
     });
 
@@ -63,6 +72,7 @@ function ProceedWallet({ navigation }) {
             flexDirection: 'row'
           }}
           onPress={() => {
+            storeOnboardStateWalletConnect();
             navigation.navigate("WalletConnect");
           }}
         >
@@ -82,7 +92,7 @@ function ProceedWallet({ navigation }) {
             flexDirection: "row"
           }}
           onPress={() => {
-            storeOnboardState();
+            storeOnboardStateAnonymous();
             navigation.navigate("Onboarding");
           }}
         >

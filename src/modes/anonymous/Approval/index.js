@@ -149,7 +149,7 @@ function AnonymousApproval({ navigation }) {
   }
 
   return (
-    <VStack w={"100%"} h={"100%"} backgroundColor={colors.black}>
+    <VStack w={"100%"} h={"100%"} pt={30} backgroundColor={colors.black}>
       <ImageBackground
         source={background}
         style={{

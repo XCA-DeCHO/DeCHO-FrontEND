@@ -3,28 +3,28 @@ import { View } from "react-native";
 import ImageBackground from "react-native/Libraries/Image/ImageBackground";
 import {
   Button,
-  HStack,
   Image,
   useToast,
   Modal,
-  Slider,
   ScrollView,
   Text,
   VStack,
   FlatList,
   Spinner,
 } from "native-base";
-import { Dimensions, Linking, TouchableOpacity } from "react-native";
+import { Dimensions, Platform, TouchableOpacity } from "react-native";
 import colors from "../../../utils/colors";
 import NameBox from "../../../globalComponents/infoBox/NameBox";
 import { WALLET_CONNECT_BASE_URL } from "@env";
-
+import Slider from "react-native-slider";
 //Images import
 const plus = require("../../../../assets/icons/+.png");
 const approval = require("../../../../assets/icons/check-circle-2.png");
 const settings = require("../../../../assets/icons/settings-2.png");
 const Search = require("../../../../assets/icons/search.png");
 const minimize = require("../../../../assets/icons/minimize-2.png");
+
+const appPlatform = Platform.OS === 'ios' ? 'ios' : 'android'
 
 function wcDonate({ navigation }) {
   const copy = require("../../../../assets/images/connectWallet/copy.png");
@@ -244,7 +244,7 @@ function wcDonate({ navigation }) {
         height: "100%",
       }}
     >
-      <ScrollView>
+      <ScrollView pt={30}>
         <VStack w={"100%"} h={"100%"} pt={10} space={3} mb={110}>
           <Text
             mx={7}
@@ -273,24 +273,14 @@ function wcDonate({ navigation }) {
                 it's Goal
               </Text>
               <Slider
-              alignSelf={'center'}
-                    w="3/4"
-                    maxW="300"
-                    defaultValue={parseInt(goal) - parseInt(amount)}
-                    colorScheme={"teal"}
-                    minValue={0}
-                    maxValue={parseInt(goal) - parseInt(amount)}
-                    onChange={v => {
-                      SetOnChangeValue(Math.floor(v))
-                    }}
-                    accessibilityLabel="slider"
-                    step={1}
-                  >
-                    <Slider.Track>
-                      <Slider.FilledTrack />
-                    </Slider.Track>
-                    <Slider.Thumb />
-                  </Slider>
+          value={onChangeValue}
+          onValueChange={(value) => SetOnChangeValue(value)}
+          minimumValue={0}
+          step={1}
+          maximumValue={parseInt(goal) - parseInt(amount)} 
+          style={{
+            width:'100%'
+          }}/>
                   <Text alignSelf={'center'}
                 fontSize={"36"}
                 fontFamily={"JosefinSans-Bold"}
@@ -301,7 +291,7 @@ function wcDonate({ navigation }) {
             <Modal.Footer>
               <Button
                 onPress={() => {
-                  navigation.navigate('WebviewURL', {source : WALLET_CONNECT_BASE_URL+"?recipientAddress="+address+"&amountToSend="+onChangeValue+"&requestType=makeTxn&txnMethod=algo"})
+                  navigation.navigate('WebviewURL', {source : WALLET_CONNECT_BASE_URL+"?recipientAddress="+address+"&amountToSend="+onChangeValue+"&requestType=makeTxn&txnMethod=algo&deviceType="+ appPlatform +""})
                   setShowModal(false);}}
                 colorScheme="teal"
               >

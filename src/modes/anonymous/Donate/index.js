@@ -239,7 +239,7 @@ function AnonymousDonate({ navigation }) {
         height: "100%",
       }}
     >
-      <ScrollView>
+      <ScrollView pt={30}>
         <VStack w={"100%"} h={"100%"} pt={10} space={3} mb={110}>
           <Text
             mx={7}

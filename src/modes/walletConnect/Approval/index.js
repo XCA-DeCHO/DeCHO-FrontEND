@@ -17,17 +17,18 @@ import {
   TouchableOpacity,
   Dimensions,
   ImageBackground,
+  Platform,
 } from "react-native";
 import colors from "../../../utils/colors";
 import NameBox from "../../../globalComponents/infoBox/NameBox";
-import { Slider } from "native-base";
+import Slider from "react-native-slider";
 import { WALLET_CONNECT_BASE_URL } from "@env";
 
+const appPlatform = Platform.OS === 'ios' ? 'ios' : 'android'
 function wcApproval({ navigation }) {
   const plus = require("../../../../assets/icons/+.png");
   const donation1 = require("../../../../assets/icons/donation1.png");
   const settings = require("../../../../assets/icons/settings-2.png");
-  const copy = require("../../../../assets/images/connectWallet/copy.png");
   const background = require("../../../../assets/images/bgImgs/Artboard1.png");
   const toast = useToast();
 
@@ -149,7 +150,7 @@ function wcApproval({ navigation }) {
   }
 
   return (
-    <VStack w={"100%"} h={"100%"} backgroundColor={colors.black}>
+    <VStack w={"100%"} h={"100%"} pt={30} backgroundColor={colors.black}>
       <ImageBackground
         source={background}
         style={{
@@ -190,23 +191,14 @@ function wcApproval({ navigation }) {
                   m={2}
                 >
                   <Slider
-                    w="3/4"
-                    maxW="300"
-                    defaultValue={parseInt(goal) - parseInt(amount)}
-                    colorScheme={"teal"}
-                    minValue={0}
-                    maxValue={parseInt(goal) - parseInt(amount)}
-                    onChange={v => {
-                      SetOnChangeValue(Math.floor(v))
-                    }}
-                    accessibilityLabel="slider"
-                    step={1}
-                  >
-                    <Slider.Track>
-                      <Slider.FilledTrack />
-                    </Slider.Track>
-                    <Slider.Thumb />
-                  </Slider>
+          value={onChangeValue}
+          onValueChange={(value) => SetOnChangeValue(value)}
+          minimumValue={0}
+          step={1}
+          maximumValue={parseInt(goal) - parseInt(amount)} 
+          style={{
+            width:'100%'
+          }}/>
                  
                 </HStack>
                 <Text alignSelf={'center'}
@@ -219,7 +211,7 @@ function wcApproval({ navigation }) {
               <Modal.Footer>
                 <Button
                   onPress={() => {
-                    navigation.navigate('WebviewURL', {source : WALLET_CONNECT_BASE_URL+"?recipientAddress="+address+"&amountToSend="+onChangeValue+"&requestType=makeTxn&txnMethod=asa"})
+                    navigation.navigate('WebviewURL', {source : WALLET_CONNECT_BASE_URL+"?recipientAddress="+address+"&amountToSend="+onChangeValue+"&requestType=makeTxn&txnMethod=asa&deviceType="+ appPlatform +""})
                     setShowModal(false);
                   }}
                   bgColor={colors.teal}

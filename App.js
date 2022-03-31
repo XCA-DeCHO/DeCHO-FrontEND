@@ -5,8 +5,6 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ProceedWallet from './src/ProceedWallet';
-import ConnectWallet from './src/ConnectWallet';
-import NewWalletSuccess from './src/NewWalletSuccess';
 import Onboarding from "./src/Onboarding";
 import AnonymousApproval from "./src/modes/anonymous/Approval";
 import ViewInfo from "./src/Info/ViewInfo";
@@ -33,8 +31,6 @@ function App() {
             headerShown: false,
           }}>
           <Stack.Screen name="ProceedWallet" component={ProceedWallet} />
-          <Stack.Screen name="ConnectWallet" component={ConnectWallet} />
-          <Stack.Screen name="NewWalletSuccess" component={NewWalletSuccess} />
           <Stack.Screen name="Onboarding" component={Onboarding} />
           <Stack.Screen name="AnonymousApproval" component={AnonymousApproval} />
           <Stack.Screen name="AnonymousDonate" component={AnonymousDonate} />

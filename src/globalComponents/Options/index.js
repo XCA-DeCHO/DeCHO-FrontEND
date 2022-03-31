@@ -108,7 +108,7 @@ function Options({ navigation }) {
             <TouchableOpacity
               style={{
                 height: 60,
-                marginBottom: 110,
+                marginBottom: 5,
                 borderRadius: 5,
                 alignItems: "center",
                 justifyContent: "space-between",
@@ -138,6 +138,40 @@ function Options({ navigation }) {
                 {" >"}
               </Text>
             </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                height: 60,
+                marginBottom: 50,
+                borderRadius: 5,
+                alignItems: "center",
+                justifyContent: "space-between",
+                flexDirection: "row",
+              }}
+              onPress={() => {
+                Linking.openURL("https://decho.finance").catch((error) =>
+                  toast.show({ description: error })
+                );
+              }}
+            >
+              <HStack alignItems={"center"} >
+                <Image width={5} height={5} marginRight={5} source={globe} />
+                <Text
+                  fontSize={24}
+                  color={colors.white}
+                  fontFamily={"JosefinSans-Regular"}
+                >
+                  CHOICECOIN Rewards
+                </Text>
+              </HStack>
+              <Text
+                fontSize={24}
+                color={colors.white}
+                fontFamily={"JosefinSans-Regular"}
+              >
+                {" >"}
+              </Text>
+            </TouchableOpacity>
+            
           </VStack>
         </VStack>
       </ScrollView>
